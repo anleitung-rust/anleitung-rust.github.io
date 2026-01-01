@@ -2,6 +2,22 @@
 
 Jetzt wird es spannend! Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
 
+## Wo schreibst du den Code?
+
+Wenn du den Anweisungen aus Kapitel 0 (Einrichtung) gefolgt bist, hast du bereits ein Projekt erstellt. Jetzt öffnest du die Datei **`src/main.rs`** in deinem Projekt-Ordner – dort schreibst du dein Programm hinein.
+
+**Wichtig:** Die Datei `src/main.rs` ist die Hauptdatei deines Projekts. Hier beginnt dein Programm, wenn du es startest.
+
+### Mehrere Programme im gleichen Projekt (optional)
+
+Später möchtest du vielleicht mehrere verschiedene Programme ausprobieren, ohne das vorherige zu überschreiben. Dafür kannst du zusätzliche Programmdateien im Ordner `src/bin/` erstellen:
+
+1. Erstelle einen Ordner `bin` in deinem `src`-Verzeichnis (falls er noch nicht existiert)
+2. Lege dort neue Dateien an, z.B. `src/bin/mein_programm.rs`
+3. Starte sie mit: `cargo run --bin mein_programm`
+
+Für den Anfang reicht aber `src/main.rs` vollkommen aus!
+
 ## Das erste Programm
 
 Hier ist der Code für unser erstes Programm:
