@@ -2,3 +2,6 @@
 title = "Rustanleitung - Programmieren lernen mit Rust"
 authors = []
 language = "de"
+
+[output.html.playground]
+runnable = false
