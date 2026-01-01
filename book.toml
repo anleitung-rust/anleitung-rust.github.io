@@ -1,4 +1,7 @@
 [book]
-title = "Rustanleitung"
+title = "Rustanleitung - Programmieren lernen mit Rust"
 authors = []
-language = "en"
+language = "de"
+
+[output.html.playground]
+runnable = false

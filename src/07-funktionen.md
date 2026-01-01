@@ -1,0 +1,145 @@
+# Funktionen
+
+Funktionen sind wie kleine Unterprogramme, die eine bestimmte Aufgabe erledigen. Sie helfen dir, deinen Code zu organisieren und wiederzuverwenden.
+
+## Was ist eine Funktion?
+
+Eine **Funktion** ist ein benannter Block von Code, den du immer wieder aufrufen kannst. Stell dir vor, du hast ein Rezept für Pfannkuchen. Anstatt jedes Mal die ganze Anleitung aufzuschreiben, sagst du einfach "Mache Pfannkuchen" – und alle wissen, was zu tun ist.
+
+## Die main-Funktion
+
+Du kennst bereits eine Funktion – die `main`-Funktion! Das ist die Funktion, in der dein Programm startet:
+
+```rust
+fn main() {
+    // Dein Code hier
+}
+```
+
+## Eine eigene Funktion erstellen
+
+So erstellst du eine eigene Funktion:
+
+```rust
+fn zeichne_quadrat(turtle: &mut TurtlePlan, groesse: f32) {
+    for _ in 0..4 {
+        turtle.forward(groesse);
+        turtle.right(90.0);
+    }
+}
+```
+
+Was bedeutet das?
+- `fn` bedeutet "function" (Funktion)
+- `zeichne_quadrat` ist der Name der Funktion
+- `(turtle: &mut TurtlePlan, groesse: f32)` sind die **Parameter** (Werte, die die Funktion braucht)
+- Der Code zwischen `{ }` wird ausgeführt, wenn die Funktion aufgerufen wird
+
+## Parameter
+
+**Parameter** sind Werte, die du einer Funktion übergibst. In unserem Beispiel:
+- `turtle: &mut TurtlePlan` - Die Schildkröte, die zeichnen soll
+- `groesse: f32` - Die Größe des Quadrats
+
+So kann die gleiche Funktion Quadrate in verschiedenen Größen zeichnen!
+
+## Eine Funktion aufrufen
+
+Um eine Funktion zu verwenden, rufst du sie auf:
+
+```rust
+zeichne_quadrat(&mut turtle, 50.0);
+```
+
+Das bedeutet: "Führe die Funktion `zeichne_quadrat` aus und übergib ihr die Schildkröte und die Größe 50.0."
+
+## Vollständiges Beispiel
+
+```rust
+{{#include ../codesamples/examples/funktionen.rs}}
+```
+
+Dieses Programm:
+1. Definiert eine Funktion `zeichne_quadrat`
+2. Zeichnet ein kleines Quadrat (50.0)
+3. Bewegt die Schildkröte
+4. Zeichnet ein größeres Quadrat (80.0) in einer anderen Farbe
+
+Die Funktion können wir so oft aufrufen, wie wir wollen – mit verschiedenen Größen!
+
+## Mehrere Funktionen
+
+Du kannst so viele Funktionen erstellen, wie du möchtest:
+
+```rust
+{{#include ../codesamples/examples/mehrere_formen.rs}}
+```
+
+Hier haben wir zwei Funktionen:
+- `zeichne_dreieck` - zeichnet ein Dreieck
+- `zeichne_quadrat` - zeichnet ein Quadrat
+
+Jede Funktion macht genau eine Sache – das macht den Code übersichtlich!
+
+## Warum Funktionen verwenden?
+
+Funktionen haben viele Vorteile:
+
+1. **Wiederverwendung**: Schreibe den Code einmal, verwende ihn oft
+2. **Organisation**: Teile komplexe Programme in kleine, verständliche Teile
+3. **Lesbarkeit**: `zeichne_stern()` ist leichter zu verstehen als 20 Zeilen Code
+4. **Fehlersuche**: Wenn etwas nicht funktioniert, weißt du genau, wo du suchen musst
+
+## Funktionen ohne Parameter
+
+Funktionen müssen nicht unbedingt Parameter haben:
+
+```rust
+fn zeichne_stern(turtle: &mut TurtlePlan) {
+    for _ in 0..5 {
+        turtle.forward(100.0);
+        turtle.right(144.0);
+    }
+}
+```
+
+Diese Funktion zeichnet immer einen Stern mit der gleichen Größe.
+
+## Das DRY-Prinzip
+
+Programmierer folgen oft dem **DRY-Prinzip**: "Don't Repeat Yourself" (Wiederhole dich nicht).
+
+**Schlecht** (sich wiederholend):
+```rust
+// Quadrat 1
+for _ in 0..4 {
+    turtle.forward(50.0);
+    turtle.right(90.0);
+}
+// ... Position ändern ...
+// Quadrat 2
+for _ in 0..4 {
+    turtle.forward(80.0);
+    turtle.right(90.0);
+}
+```
+
+**Gut** (mit Funktion):
+```rust
+zeichne_quadrat(&mut turtle, 50.0);
+// ... Position ändern ...
+zeichne_quadrat(&mut turtle, 80.0);
+```
+
+Die Version mit Funktion ist kürzer, klarer und leichter zu ändern!
+
+## Zusammenfassung
+
+Du hast gelernt:
+- `fn name() { }` - Erstellt eine neue Funktion
+- Parameter ermöglichen es, Werte an Funktionen zu übergeben
+- Funktionen machen Code wiederverwendbar und übersichtlich
+- Das DRY-Prinzip: "Don't Repeat Yourself"
+- Jede Funktion sollte eine klare Aufgabe haben
+
+Im nächsten Kapitel siehst du weitere kreative Beispiele, die alles zusammenbringen, was du gelernt hast!
