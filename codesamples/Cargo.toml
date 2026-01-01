@@ -1,6 +1,8 @@
 [package]
 name = "codesamples"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
+turtle-lib = { git = "https://github.com/enaut/turtlers", package = "turtle-lib" }
+macroquad = "0.4"
