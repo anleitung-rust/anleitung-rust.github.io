@@ -2,6 +2,10 @@
 
 [Einleitung](./einleitung.md)
 
+# Vorbereitung
+
+- [Einrichtung der Programmierumgebung](./00-einrichtung.md)
+
 # Erste Schritte
 
 - [Was ist Programmieren?](./01-was-ist-programmieren.md)

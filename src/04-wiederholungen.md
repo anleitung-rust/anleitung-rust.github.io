@@ -1,6 +1,22 @@
 # Wiederholungen (Schleifen)
 
-Stell dir vor, du möchtest 100 mal den gleichen Befehl ausführen. Es wäre sehr mühsam, diesen Befehl 100 mal zu schreiben! Hier kommen **Schleifen** ins Spiel.
+Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
+
+```rust
+turtle.forward(100.0);
+turtle.right(90.0);
+
+turtle.forward(100.0);
+turtle.right(90.0);
+
+turtle.forward(100.0);
+turtle.right(90.0);
+
+turtle.forward(100.0);
+turtle.right(90.0);
+```
+
+Das war ziemlich mühsam! Stell dir vor, du möchtest 100 mal den gleichen Befehl ausführen. Es wäre sehr mühsam, diesen Befehl 100 mal zu schreiben! Hier kommen **Schleifen** ins Spiel.
 
 ## Was ist eine Schleife?
 
@@ -20,6 +36,16 @@ for _ in 0..anzahl {
 - `0..anzahl` gibt an, wie oft wiederholt wird (von 0 bis anzahl-1)
 - Der Unterstrich `_` bedeutet, dass wir die Zählvariable nicht brauchen
 - Die Befehle in den geschweiften Klammern `{ }` werden wiederholt
+
+## Beispiel: Ein Quadrat – jetzt mit Schleife!
+
+Erinnere dich an unser Quadrat von vorhin. Mit einer Schleife wird der Code viel kürzer und übersichtlicher:
+
+```rust
+{{#include ../codesamples/examples/quadrat_schleife.rs}}
+```
+
+Wow! Statt 8 Zeilen Code haben wir jetzt nur noch 3 Zeilen in der Schleife. Das macht genau das Gleiche wie der lange Code vorher, ist aber viel einfacher zu lesen und zu verstehen!
 
 ## Beispiel: Ein Achteck
 

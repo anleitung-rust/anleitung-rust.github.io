@@ -1,13 +1,13 @@
 # Dein erstes Programm
 
-Jetzt wird es spannend! Wir schreiben unser erstes Programm. Die Schildkröte soll ein Quadrat zeichnen.
+Jetzt wird es spannend! Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
 
-## Das Quadrat-Programm
+## Das erste Programm
 
 Hier ist der Code für unser erstes Programm:
 
 ```rust
-{{#include ../codesamples/examples/quadrat.rs}}
+{{#include ../codesamples/examples/erstes_programm.rs}}
 ```
 
 ## Was passiert hier?
@@ -35,6 +35,8 @@ Jedes Rust-Programm hat eine `main`-Funktion (englisch für "Haupt"). Das ist de
 
 Das `#[turtle_main]` darüber ist eine spezielle Anweisung, die das Fenster für die Schildkröte vorbereitet.
 
+**Tipp:** Über der Zeile `fn main()` siehst du in VS Code einen **Run**-Button. Damit kannst du das Programm starten!
+
 ### 3. Die Stiftfarbe setzen
 
 ```rust
@@ -43,36 +45,79 @@ turtle.set_pen_color(BLUE);
 
 Hier sagen wir der Schildkröte: "Verwende die Farbe Blau zum Zeichnen." `turtle` ist unsere Schildkröte und `set_pen_color` ist der Befehl, um die Farbe zu ändern.
 
-### 4. Das Quadrat zeichnen
+### 4. Die erste Linie zeichnen
 
 ```rust
-for _ in 0..4 {
-    turtle.forward(100.0);
-    turtle.right(90.0);
-}
+turtle.forward(100.0);
 ```
 
-Das ist eine **Schleife** (ein Befehl, der sich wiederholt). Hier passiert Folgendes:
-- `for _ in 0..4` bedeutet: "Wiederhole die folgenden Befehle 4 mal"
-- `turtle.forward(100.0)` bedeutet: "Gehe 100 Schritte vorwärts"
-- `turtle.right(90.0)` bedeutet: "Drehe dich 90 Grad nach rechts"
+Dieser Befehl sagt der Schildkröte: "Gehe 100 Schritte vorwärts." Dabei zeichnet sie eine Linie.
 
-Ein Quadrat hat vier gleich lange Seiten und vier rechte Winkel (90 Grad). Deshalb wiederholen wir diese Befehle genau 4 mal!
+### 5. Drehen
 
-## Was siehst du, wenn du das Programm startest?
+```rust
+turtle.right(90.0);
+```
 
-Wenn du dieses Programm ausführst, öffnet sich ein Fenster. Darin siehst du:
+Jetzt dreht sich die Schildkröte 90 Grad nach rechts. Sie schaut jetzt nach unten!
+
+### 6. Die zweite Linie zeichnen
+
+```rust
+turtle.forward(100.0);
+```
+
+Die Schildkröte geht wieder 100 Schritte vorwärts – jetzt entsteht eine Linie nach unten.
+
+Das Ergebnis ist ein **L**!
+
+## Programm starten
+
+So startest du dein Programm:
+
+1. **Run-Button verwenden** (einfachste Methode):
+   - Klicke auf **Run** über der `fn main()` Zeile
+   - Warte einen Moment (beim ersten Mal dauert es etwas länger)
+   - Ein Fenster öffnet sich und zeigt deine Zeichnung!
+
+2. **Terminal verwenden**:
+   - Öffne das Terminal in VS Code
+   - Tippe `cargo run` und drücke Enter
+
+## Was siehst du?
+
+Wenn du das Programm ausführst, öffnet sich ein Fenster. Darin siehst du:
 - Eine kleine Schildkröte (oft als Dreieck dargestellt)
 - Die Schildkröte bewegt sich und zeichnet dabei
-- Am Ende entsteht ein blaues Quadrat!
+- Am Ende siehst du ein blaues **L**!
+
+## Ein Quadrat zeichnen
+
+Jetzt wollen wir etwas Anspruchsvolleres zeichnen: ein Quadrat! Ein Quadrat hat vier gleich lange Seiten. Wir müssen also viermal das Gleiche machen: vorwärts gehen und nach rechts drehen.
+
+```rust
+{{#include ../codesamples/examples/quadrat.rs}}
+```
+
+Hier wiederholen wir den Code viermal:
+- Erste Seite: vorwärts, dann rechts drehen
+- Zweite Seite: vorwärts, dann rechts drehen
+- Dritte Seite: vorwärts, dann rechts drehen
+- Vierte Seite: vorwärts, dann rechts drehen
+
+Das funktioniert, aber du siehst: Der Code wiederholt sich! Es muss doch einen besseren Weg geben...
+
+Genau! Den gibt es – und den lernst du in Kapitel 4 kennen, wenn wir über **Schleifen** sprechen. Schleifen sind ein Weg, Code-Wiederholungen zu vermeiden.
 
 ## Zusammenfassung
 
 Du hast gerade gelernt:
 - Wie ein einfaches Rust-Programm aufgebaut ist
 - Was `use`, `fn main()` und `#[turtle_main]` bedeuten
-- Wie man die Schildkröte bewegt (`forward` und `right`)
+- Wie man die Schildkröte bewegt (`forward`)
+- Wie man die Schildkröte dreht (`right`)
 - Wie man eine Farbe setzt (`set_pen_color`)
-- Wie man Befehle wiederholt (mit `for`)
+- Wie man das Programm mit dem Run-Button startet
+- Dass sich Code manchmal wiederholt (das werden wir später eleganter lösen!)
 
 Im nächsten Kapitel schauen wir uns die verschiedenen Bewegungs- und Drehbefehle genauer an.
