@@ -1,6 +1,6 @@
 # Dein erstes Programm
 
-Jetzt wird es spannend! Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
+Jetzt wird es spannend! Du hast gelernt, was Programmieren ist und dass Rust die Sprache ist, mit der wir arbeiten. Jetzt wird es praktisch: Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
 
 ## Wo schreibst du den Code?
 
@@ -25,6 +25,8 @@ Hier ist der Code für unser erstes Programm:
 ```rust
 {{#include ../codesamples/examples/erstes_programm.rs}}
 ```
+
+![Ergebnis: Ein blaues L](screenshots/erstes_programm.svg)
 
 ## Was passiert hier?
 
@@ -114,6 +116,8 @@ Jetzt wollen wir etwas Anspruchsvolleres zeichnen: ein Quadrat! Ein Quadrat hat 
 ```rust
 {{#include ../codesamples/examples/quadrat.rs}}
 ```
+
+![Ergebnis: Ein blaues Quadrat](screenshots/quadrat.svg)
 
 Hier wiederholen wir den Code viermal:
 - Erste Seite: vorwärts, dann rechts drehen

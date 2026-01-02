@@ -35,4 +35,4 @@ So entstehen nach und nach Bilder und Muster!
 
 Bist du bereit? Dann lass uns anfangen! 🚀
 
-Im nächsten Kapitel erfährst du, was Programmieren eigentlich ist und warum es so nützlich sein kann.
+Im nächsten Kapitel richten wir gemeinsam deine Programmierumgebung ein, damit du direkt loslegen kannst.

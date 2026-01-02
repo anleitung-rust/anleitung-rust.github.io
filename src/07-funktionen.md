@@ -1,6 +1,6 @@
 # Funktionen
 
-Funktionen sind wie kleine Unterprogramme, die eine bestimmte Aufgabe erledigen. Sie helfen dir, deinen Code zu organisieren und wiederzuverwenden.
+Mit Variablen kannst du Werte speichern und wiederverwenden – das hast du im letzten Kapitel gelernt. Aber was, wenn du nicht nur Werte, sondern ganze Code-Abschnitte wiederverwenden möchtest? Hier kommen **Funktionen** ins Spiel. Funktionen sind wie kleine Unterprogramme, die eine bestimmte Aufgabe erledigen. Sie helfen dir, deinen Code zu organisieren und wiederzuverwenden.
 
 ## Was ist eine Funktion?
 
@@ -59,6 +59,8 @@ Das bedeutet: "Führe die Funktion `zeichne_quadrat` aus und übergib ihr die Sc
 {{#include ../codesamples/examples/funktionen.rs}}
 ```
 
+![Ergebnis: Zwei Quadrate in verschiedenen Größen und Farben](screenshots/funktionen.svg)
+
 Dieses Programm:
 1. Definiert eine Funktion `zeichne_quadrat`
 2. Zeichnet ein kleines Quadrat (50.0)
@@ -74,6 +76,8 @@ Du kannst so viele Funktionen erstellen, wie du möchtest:
 ```rust
 {{#include ../codesamples/examples/mehrere_formen.rs}}
 ```
+
+![Ergebnis: Ein gelbes Dreieck und ein rotes Quadrat nebeneinander](screenshots/mehrere_formen.svg)
 
 Hier haben wir zwei Funktionen:
 - `zeichne_dreieck` - zeichnet ein Dreieck

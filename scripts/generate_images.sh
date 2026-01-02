@@ -5,7 +5,7 @@ shopt -s nullglob
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 EXAMPLES_DIR="${REPO_ROOT}/codesamples/examples"
-SCREENSHOT_DIR="${REPO_ROOT}/screenshots"
+SCREENSHOT_DIR="${REPO_ROOT}/src/screenshots"
 
 mkdir -p "${SCREENSHOT_DIR}"
 cd "${REPO_ROOT}/codesamples"

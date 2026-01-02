@@ -205,4 +205,4 @@ Du hast jetzt:
 - ✅ Die Turtle-Bibliothek hinzugefügt
 - ✅ Gelernt, wie du Programme startest
 
-Jetzt bist du bereit, richtig mit dem Programmieren loszulegen! Im nächsten Kapitel schreiben wir unser erstes richtiges Turtle-Programm.
+Perfekt! Deine Programmierumgebung ist jetzt einsatzbereit. Im nächsten Kapitel erfährst du, was Programmieren eigentlich ist und warum die Schildkröten-Grafik dir dabei hilft, es zu lernen.

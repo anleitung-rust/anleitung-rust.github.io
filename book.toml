@@ -3,5 +3,12 @@ title = "Rustanleitung - Programmieren lernen mit Rust"
 authors = []
 language = "de"
 
+[build]
+extra-watch-dirs = ["src/screenshots"]
+
+[output.html]
+additional-css = []
+additional-js = []
+
 [output.html.playground]
 runnable = false

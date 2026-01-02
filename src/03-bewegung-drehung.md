@@ -1,6 +1,6 @@
 # Bewegung und Drehung
 
-Die Schildkröte kann sich auf verschiedene Arten bewegen und drehen. In diesem Kapitel lernst du alle wichtigen Bewegungsbefehle kennen.
+Du hast bereits dein erstes Programm geschrieben und die Schildkröte ein **L** und ein Quadrat zeichnen lassen. Dabei hast du die Befehle `forward()` und `right()` kennengelernt. In diesem Kapitel schauen wir uns alle wichtigen Bewegungsbefehle genauer an und lernen, wie die Schildkröte sich noch bewegen und drehen kann.
 
 ## Vorwärts und rückwärts gehen
 
@@ -29,6 +29,8 @@ Hier ist ein Programm, das beides zeigt:
 ```rust
 {{#include ../codesamples/examples/vorwaerts_rueckwaerts.rs}}
 ```
+
+![Ergebnis: Eine rote Linie, die zurückläuft](screenshots/vorwaerts_rueckwaerts.svg)
 
 Die Schildkröte geht zuerst 100 Schritte vorwärts, dann 50 Schritte zurück. Die Linie wird rot sein.
 
@@ -64,6 +66,8 @@ Grade sind ein Maß für Winkel. Ein voller Kreis hat 360 Grad:
 ```rust
 {{#include ../codesamples/examples/drehen.rs}}
 ```
+
+![Ergebnis: Drei grüne Linien in verschiedenen Winkeln](screenshots/drehen.svg)
 
 In diesem Programm:
 1. Die Schildkröte geht vorwärts und zeichnet eine grüne Linie

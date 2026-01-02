@@ -39,4 +39,4 @@ Anstatt nur Text auf dem Bildschirm zu sehen, kannst du richtige Zeichnungen ers
 
 ## Bereit für dein erstes Programm?
 
-Im nächsten Kapitel schreiben wir gemeinsam dein erstes Programm. Du wirst sehen, wie die Schildkröte ein einfaches Quadrat zeichnet.
+Jetzt weißt du, was Programmieren ist und warum Rust eine tolle Sprache dafür ist. Im nächsten Kapitel wird es praktisch: Wir schreiben gemeinsam dein erstes Programm und lassen die Schildkröte einfache Formen zeichnen!

@@ -1,6 +1,6 @@
 # Wiederholungen (Schleifen)
 
-Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
+Du kennst jetzt alle wichtigen Bewegungs- und Drehbefehle der Schildkröte. Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
 
 ```rust
 turtle.forward(100.0);
@@ -45,6 +45,8 @@ Erinnere dich an unser Quadrat von vorhin. Mit einer Schleife wird der Code viel
 {{#include ../codesamples/examples/quadrat_schleife.rs}}
 ```
 
+![Ergebnis: Ein rotes Quadrat mit Schleife gezeichnet](screenshots/quadrat_schleife.svg)
+
 Wow! Statt 8 Zeilen Code haben wir jetzt nur noch 3 Zeilen in der Schleife. Das macht genau das Gleiche wie der lange Code vorher, ist aber viel einfacher zu lesen und zu verstehen!
 
 ## Beispiel: Ein Achteck
@@ -54,6 +56,8 @@ Ein Achteck hat 8 gleich lange Seiten. Wir können es mit einer Schleife zeichne
 ```rust
 {{#include ../codesamples/examples/achteck.rs}}
 ```
+
+![Ergebnis: Ein gelbes Achteck](screenshots/achteck.svg)
 
 ### Wie funktioniert das?
 
@@ -83,6 +87,8 @@ Wollen wir etwas Komplexeres zeichnen? Wie wäre es mit einem Stern?
 ```rust
 {{#include ../codesamples/examples/stern.rs}}
 ```
+
+![Ergebnis: Ein fünfzackiger Stern in Orange](screenshots/stern.svg)
 
 Ein fünfzackiger Stern braucht einen anderen Winkel als ein regelmäßiges Fünfeck. Hier verwenden wir 144 Grad (das ist 720 ÷ 5).
 
