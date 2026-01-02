@@ -30,6 +30,8 @@ Hier ist ein Programm, das beides zeigt:
 {{#include ../codesamples/examples/vorwaerts_rueckwaerts.rs}}
 ```
 
+![Ergebnis: Eine rote Linie, die zurückläuft](screenshots/vorwaerts_rueckwaerts.svg)
+
 Die Schildkröte geht zuerst 100 Schritte vorwärts, dann 50 Schritte zurück. Die Linie wird rot sein.
 
 ## Nach links und rechts drehen
@@ -64,6 +66,8 @@ Grade sind ein Maß für Winkel. Ein voller Kreis hat 360 Grad:
 ```rust
 {{#include ../codesamples/examples/drehen.rs}}
 ```
+
+![Ergebnis: Drei grüne Linien in verschiedenen Winkeln](screenshots/drehen.svg)
 
 In diesem Programm:
 1. Die Schildkröte geht vorwärts und zeichnet eine grüne Linie

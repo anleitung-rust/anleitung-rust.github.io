@@ -34,6 +34,8 @@ Die Turtle-Bibliothek bietet viele vordefinierte Farben:
 {{#include ../codesamples/examples/farben.rs}}
 ```
 
+![Ergebnis: Ein buntes Quadrat mit verschiedenen Farben](screenshots/farben.svg)
+
 Dieses Programm zeichnet ein buntes Quadrat, bei dem jede Seite eine andere Farbe hat!
 
 ## Den Stift heben und senken
@@ -62,6 +64,8 @@ Nach diesem Befehl zeichnet die Schildkröte wieder Linien.
 {{#include ../codesamples/examples/stift_heben.rs}}
 ```
 
+![Ergebnis: Zwei getrennte blaue Linien](screenshots/stift_heben.svg)
+
 Dieses Programm zeichnet eine Linie, hebt dann den Stift, bewegt sich ohne zu zeichnen, und zeichnet dann wieder eine Linie. Es entsteht eine unterbrochene Linie!
 
 ## Flächen ausfüllen
@@ -71,6 +75,8 @@ Du kannst auch Formen mit Farbe ausfüllen:
 ```rust
 {{#include ../codesamples/examples/fuellen.rs}}
 ```
+
+![Ergebnis: Ein ausgefülltes blaues Dreieck mit grünem Rand](screenshots/fuellen.svg)
 
 ### Wie funktioniert das Füllen?
 

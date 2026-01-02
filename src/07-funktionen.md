@@ -59,6 +59,8 @@ Das bedeutet: "Führe die Funktion `zeichne_quadrat` aus und übergib ihr die Sc
 {{#include ../codesamples/examples/funktionen.rs}}
 ```
 
+![Ergebnis: Zwei Quadrate in verschiedenen Größen und Farben](screenshots/funktionen.svg)
+
 Dieses Programm:
 1. Definiert eine Funktion `zeichne_quadrat`
 2. Zeichnet ein kleines Quadrat (50.0)
@@ -74,6 +76,8 @@ Du kannst so viele Funktionen erstellen, wie du möchtest:
 ```rust
 {{#include ../codesamples/examples/mehrere_formen.rs}}
 ```
+
+![Ergebnis: Ein gelbes Dreieck und ein rotes Quadrat nebeneinander](screenshots/mehrere_formen.svg)
 
 Hier haben wir zwei Funktionen:
 - `zeichne_dreieck` - zeichnet ein Dreieck

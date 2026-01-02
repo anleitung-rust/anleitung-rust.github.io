@@ -10,6 +10,8 @@ Eine Spirale entsteht, wenn die Schildkröte sich bewegt und dabei die Schrittl�
 {{#include ../codesamples/examples/spirale.rs}}
 ```
 
+![Ergebnis: Eine lila Spirale](screenshots/spirale.svg)
+
 **Was passiert hier?**
 - Wir starten mit einer Länge von 5.0
 - In jeder Runde zeichnen wir eine Linie und drehen uns

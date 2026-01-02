@@ -26,6 +26,8 @@ Hier ist der Code für unser erstes Programm:
 {{#include ../codesamples/examples/erstes_programm.rs}}
 ```
 
+![Ergebnis: Ein blaues L](screenshots/erstes_programm.svg)
+
 ## Was passiert hier?
 
 Lass uns das Programm Schritt für Schritt durchgehen:
@@ -114,6 +116,8 @@ Jetzt wollen wir etwas Anspruchsvolleres zeichnen: ein Quadrat! Ein Quadrat hat 
 ```rust
 {{#include ../codesamples/examples/quadrat.rs}}
 ```
+
+![Ergebnis: Ein blaues Quadrat](screenshots/quadrat.svg)
 
 Hier wiederholen wir den Code viermal:
 - Erste Seite: vorwärts, dann rechts drehen

@@ -31,6 +31,8 @@ Variablen haben mehrere Vorteile:
 {{#include ../codesamples/examples/variablen.rs}}
 ```
 
+![Ergebnis: Ein grünes Quadrat mit der Seitenlänge aus der Variable](screenshots/variablen.svg)
+
 Hier verwenden wir eine Variable `seitenlaenge` für die Größe des Quadrats. Wenn wir die Größe ändern wollen, müssen wir nur die Zeile `let seitenlaenge = 80.0;` ändern, statt alle vier `forward`-Befehle!
 
 ## Mehrere Variablen
@@ -40,6 +42,8 @@ Du kannst so viele Variablen verwenden, wie du möchtest:
 ```rust
 {{#include ../codesamples/examples/mehrere_variablen.rs}}
 ```
+
+![Ergebnis: Ein rosa Achteck mit Variablen für Seiten und Winkel](screenshots/mehrere_variablen.svg)
 
 Hier haben wir drei Variablen:
 - `seitenlaenge` - für die Länge jeder Seite
@@ -75,6 +79,8 @@ laenge = laenge + 3.0;  // Jetzt ist laenge 8.0
 ```rust
 {{#include ../codesamples/examples/spirale.rs}}
 ```
+
+![Ergebnis: Eine lila Spirale mit zunehmender Linienlänge](screenshots/spirale.svg)
 
 Hier beginnt `laenge` bei 5.0 und wird in jedem Schritt um 3.0 erhöht. So entsteht eine Spirale, bei der die Linien immer länger werden!
 
