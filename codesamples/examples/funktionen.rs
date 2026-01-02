@@ -17,7 +17,7 @@ fn main() {
     turtle.set_pen_color(BLUE);
     
     // Zeichne ein kleines Quadrat
-    zeichne_quadrat(&mut turtle, 50.0);
+    zeichne_quadrat(turtle, 50.0);
     
     // Bewege die Schildkröte
     turtle.pen_up();
@@ -26,5 +26,5 @@ fn main() {
     
     // Zeichne ein größeres Quadrat
     turtle.set_pen_color(RED);
-    zeichne_quadrat(&mut turtle, 80.0);
+    zeichne_quadrat(turtle, 80.0);
 }

@@ -22,7 +22,7 @@ fn zeichne_quadrat(turtle: &mut TurtlePlan, groesse: f32) {
 fn main() {
     // Zeichne ein Dreieck
     turtle.set_pen_color(RED);
-    zeichne_dreieck(&mut turtle, 80.0);
+    zeichne_dreieck(turtle, 80.0);
     
     // Bewege zur nächsten Position
     turtle.pen_up();
@@ -31,5 +31,5 @@ fn main() {
     
     // Zeichne ein Quadrat
     turtle.set_pen_color(BLUE);
-    zeichne_quadrat(&mut turtle, 70.0);
+    zeichne_quadrat(turtle, 70.0);
 }
