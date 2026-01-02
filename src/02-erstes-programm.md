@@ -1,6 +1,6 @@
 # Dein erstes Programm
 
-Jetzt wird es spannend! Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
+Jetzt wird es spannend! Du hast gelernt, was Programmieren ist und dass Rust die Sprache ist, mit der wir arbeiten. Jetzt wird es praktisch: Wir schreiben unser erstes Programm. Die Schildkröte soll einfache Linien zeichnen und daraus ein **L** bilden.
 
 ## Wo schreibst du den Code?
 

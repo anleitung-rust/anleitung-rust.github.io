@@ -1,6 +1,6 @@
 # Variablen
 
-Variablen sind wie Schubladen, in denen du Werte aufbewahren kannst. Sie machen deine Programme flexibler und leichter zu verstehen.
+Du kannst jetzt bunte Zeichnungen erstellen und hast gelernt, wie du den Stift hebst und senkst. Aber was, wenn du bestimmte Werte – wie die Größe eines Quadrats oder die Anzahl der Seiten – mehrmals verwenden möchtest? Hier kommen **Variablen** ins Spiel. Variablen sind wie Schubladen, in denen du Werte aufbewahren kannst. Sie machen deine Programme flexibler und leichter zu verstehen.
 
 ## Was ist eine Variable?
 

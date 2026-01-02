@@ -1,6 +1,6 @@
 # Wiederholungen (Schleifen)
 
-Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
+Du kennst jetzt alle wichtigen Bewegungs- und Drehbefehle der Schildkröte. Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
 
 ```rust
 turtle.forward(100.0);

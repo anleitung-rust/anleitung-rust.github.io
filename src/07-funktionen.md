@@ -1,6 +1,6 @@
 # Funktionen
 
-Funktionen sind wie kleine Unterprogramme, die eine bestimmte Aufgabe erledigen. Sie helfen dir, deinen Code zu organisieren und wiederzuverwenden.
+Mit Variablen kannst du Werte speichern und wiederverwenden – das hast du im letzten Kapitel gelernt. Aber was, wenn du nicht nur Werte, sondern ganze Code-Abschnitte wiederverwenden möchtest? Hier kommen **Funktionen** ins Spiel. Funktionen sind wie kleine Unterprogramme, die eine bestimmte Aufgabe erledigen. Sie helfen dir, deinen Code zu organisieren und wiederzuverwenden.
 
 ## Was ist eine Funktion?
 

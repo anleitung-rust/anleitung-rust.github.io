@@ -1,6 +1,6 @@
 # Bewegung und Drehung
 
-Die Schildkröte kann sich auf verschiedene Arten bewegen und drehen. In diesem Kapitel lernst du alle wichtigen Bewegungsbefehle kennen.
+Du hast bereits dein erstes Programm geschrieben und die Schildkröte ein **L** und ein Quadrat zeichnen lassen. Dabei hast du die Befehle `forward()` und `right()` kennengelernt. In diesem Kapitel schauen wir uns alle wichtigen Bewegungsbefehle genauer an und lernen, wie die Schildkröte sich noch bewegen und drehen kann.
 
 ## Vorwärts und rückwärts gehen
 

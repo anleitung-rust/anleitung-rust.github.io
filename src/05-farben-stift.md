@@ -1,6 +1,6 @@
 # Farben und Stift
 
-Mit Farben können wir unsere Zeichnungen viel interessanter machen! In diesem Kapitel lernst du, wie du die Farbe änderst und den Stift hebst und senkst.
+Du hast gelernt, wie Schleifen dir helfen, Code zu wiederholen und komplexe Formen mit wenig Code zu zeichnen. Jetzt machen wir unsere Zeichnungen bunter! In diesem Kapitel lernst du, wie du die Farbe änderst und den Stift hebst und senkst.
 
 ## Die Stiftfarbe ändern
 

@@ -1,6 +1,6 @@
 # Weitere Beispiele
 
-Jetzt, wo du die Grundlagen kennst, schauen wir uns einige kreative Beispiele an, die zeigen, was du mit der Turtle-Grafik alles machen kannst!
+Du hast in den letzten Kapiteln viel gelernt: Bewegung, Schleifen, Farben, Variablen und Funktionen. Jetzt ist es Zeit, alles zusammenzubringen! In diesem Kapitel schauen wir uns einige kreative Beispiele an, die zeigen, was du mit der Turtle-Grafik alles machen kannst.
 
 ## Die Spirale
 
