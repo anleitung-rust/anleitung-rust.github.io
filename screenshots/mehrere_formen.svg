@@ -1,0 +1,9 @@
+<svg viewBox="-20.000008 -89.28203 260 179.28203" xmlns="http://www.w3.org/2000/svg">
+<line stroke="rgb(229,40,56)" stroke-width="2" x1="0" x2="80" y1="0" y2="0"/>
+<line stroke="rgb(229,40,56)" stroke-width="2" x1="80" x2="39.999996" y1="0" y2="-69.28203"/>
+<line stroke="rgb(229,40,56)" stroke-width="2" x1="39.999996" x2="-0.0000076293945" y1="-69.28203" y2="0"/>
+<line stroke="rgb(0,119,242)" stroke-width="2" x1="150" x2="220" y1="0" y2="0"/>
+<line stroke="rgb(0,119,242)" stroke-width="2" x1="220" x2="220" y1="0" y2="70"/>
+<line stroke="rgb(0,119,242)" stroke-width="2" x1="220" x2="150" y1="70" y2="69.99999"/>
+<line stroke="rgb(0,119,242)" stroke-width="2" x1="150" x2="149.99998" y1="69.99999" y2="-0.0000076293945"/>
+</svg>
