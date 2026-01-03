@@ -20,7 +20,7 @@ fn main() {
     turtle.forward(100.0);      // Links nach unten (zurück zum Start)
     
     // Jetzt die Diagonalen und das Dach
-    turtle.left(45.0);          // Drehe zur ersten Diagonale
+    turtle.left(135.0);          // Drehe zur ersten Diagonale
     turtle.forward(141.42);     // Diagonale: ca. 141 (≈ 100×√2 für ein 100×100 Quadrat)
     turtle.left(90.0);
     turtle.forward(70.71);      // Dach: ca. 71 (≈ 50×√2)
