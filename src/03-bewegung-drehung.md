@@ -85,6 +85,78 @@ Wenn ein Programm startet:
 - Sie schaut nach rechts (das ist 0 Grad)
 - Der Stift ist unten (sie zeichnet also)
 
+## Übungsaufgaben
+
+Jetzt bist du dran! Hier sind einige Aufgaben, um das Gelernte zu üben.
+
+### Aufgabe 1: Geometrische Übung
+
+Zeichne ein gleichseitiges Dreieck mit der Schildkröte. Ein gleichseitiges Dreieck hat drei gleich lange Seiten und drei gleiche Winkel von je 60 Grad.
+
+**Hinweis:** Du musst die Schildkröte bei jedem Eckpunkt drehen. Denk daran, dass du die Schildkröte um 120 Grad drehen musst (nicht 60 Grad!), weil die Schildkröte sich nach außen dreht.
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Ein blaues gleichseitiges Dreieck](screenshots/geometrische_uebung.svg)
+
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
+```rust
+{{#include ../codesamples/examples/geometrische_uebung.rs}}
+```
+
+</details>
+
+### Aufgabe 2: Haus vom Nikolaus
+
+Kennst du den Spruch "Das ist das Haus vom Nikolaus"? Dabei zeichnet man ein Haus in einem Zug, ohne den Stift abzusetzen. Versuche, diese klassische Zeichenübung nachzuprogrammieren!
+
+**Hinweis:** Das Haus besteht aus einem Quadrat und einem Dreieck als Dach. Du musst verschiedene Winkel verwenden: 90 Grad für die Ecken des Quadrats und 135 Grad für die Diagonalen.
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Das Haus vom Nikolaus in Rot](screenshots/haus_vom_nikolaus.svg)
+
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
+```rust
+{{#include ../codesamples/examples/haus_vom_nikolaus.rs}}
+```
+
+**Erklärung der Lösung:**
+1. Wir starten unten links und zeichnen die untere Kante des Hauses
+2. Dann die Dachlinien in einem Zug
+3. Zurück zur linken unteren Ecke
+4. Die linke Seite nach oben
+5. Die obere Kante nach rechts
+6. Die rechte Seite nach unten
+7. Zum Schluss die Diagonale durch das Quadrat
+
+</details>
+
+### Aufgabe 3: Fünfstern
+
+Zeichne einen fünfzackigen Stern! Dies ist etwas anspruchsvoller, weil du einen besonderen Winkel verwenden musst.
+
+**Hinweis:** Bei einem fünfzackigen Stern musst du bei jeder Zacke 144 Grad drehen (das ist 720 ÷ 5). Wiederhole die Bewegung `forward()` und `right(144.0)` fünf Mal.
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Ein fünfzackiger Stern in Gold](screenshots/fuenfstern.svg)
+
+<details>
+<summary><b>Lösung anzeigen</b></summary>
+
+```rust
+{{#include ../codesamples/examples/fuenfstern.rs}}
+```
+
+**Warum 144 Grad?** Ein Stern hat zwar 5 Zacken, aber die Schildkröte muss sich bei jeder Spitze weiter drehen, um die nächste Zacke zu zeichnen. Der Winkel von 144 Grad ergibt sich aus der Formel: 720 ÷ 5 = 144.
+
+</details>
+
 ## Zusammenfassung
 
 Du hast gelernt:
