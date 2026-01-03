@@ -8,37 +8,24 @@ use turtle_lib::*;
 fn main() {
     turtle.set_pen_color(RED);
     
-    // Startposition: unten links
-    // Zeichne das Haus in einem Zug ohne Stift heben
+    // Das klassische "Haus vom Nikolaus" - gezeichnet in einem Zug
     
-    // Untere horizontale Linie nach rechts
-    turtle.forward(100.0);
-    
-    // Diagonale nach oben links (Dach rechts)
-    turtle.left(135.0);
-    turtle.forward(70.71);  // sqrt(50^2 + 50^2) ≈ 70.71
-    
-    // Dach-Spitze nach rechts oben
-    turtle.right(90.0);
-    turtle.forward(70.71);
-    
-    // Diagonale nach unten links zurück
-    turtle.right(135.0);
-    turtle.forward(100.0);
-    
-    // Linke vertikale Seite nach oben
+    // Starte unten links, zeichne das Quadrat
+    turtle.forward(100.0);      // Unten nach rechts
     turtle.left(90.0);
-    turtle.forward(100.0);
-    
-    // Obere horizontale Linie nach rechts
+    turtle.forward(100.0);      // Rechts nach oben
     turtle.left(90.0);
-    turtle.forward(100.0);
-    
-    // Rechte vertikale Seite nach unten
+    turtle.forward(100.0);      // Oben nach links
     turtle.left(90.0);
-    turtle.forward(100.0);
+    turtle.forward(100.0);      // Links nach unten (zurück zum Start)
     
-    // Diagonale Linie von unten rechts nach oben links
-    turtle.left(135.0);
-    turtle.forward(141.42);  // sqrt(100^2 + 100^2) ≈ 141.42
+    // Jetzt die Diagonalen und das Dach
+    turtle.left(45.0);          // Drehe zur ersten Diagonale
+    turtle.forward(141.42);     // Diagonale: ca. 141 (≈ 100×√2 für ein 100×100 Quadrat)
+    turtle.left(90.0);
+    turtle.forward(70.71);      // Dach: ca. 71 (≈ 50×√2)
+    turtle.left(90.0);
+    turtle.forward(70.71);      // Dach: ca. 71 (≈ 50×√2)
+    turtle.left(90.0);
+    turtle.forward(141.42);     // Diagonale: ca. 141 (≈ 100×√2)
 }

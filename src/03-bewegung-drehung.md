@@ -112,7 +112,7 @@ So sollte dein Ergebnis aussehen:
 
 Kennst du den Spruch "Das ist das Haus vom Nikolaus"? Dabei zeichnet man ein Haus in einem Zug, ohne den Stift abzusetzen. Versuche, diese klassische Zeichenübung nachzuprogrammieren!
 
-**Hinweis:** Das Haus besteht aus einem Quadrat und einem Dreieck als Dach. Du musst verschiedene Winkel verwenden: 90 Grad für die Ecken des Quadrats und 135 Grad für die Diagonalen.
+**Hinweis:** Das Haus besteht aus einem Quadrat und einem Dreieck als Dach. Du musst verschiedene Winkel verwenden: 90 Grad für die Ecken des Quadrats und 45 Grad für die Diagonalen. Die Diagonale ist etwas länger als die Seiten (ungefähr 141 statt 100).
 
 So sollte dein Ergebnis aussehen:
 
@@ -126,13 +126,13 @@ So sollte dein Ergebnis aussehen:
 ```
 
 **Erklärung der Lösung:**
-1. Wir starten unten links und zeichnen die untere Kante des Hauses
-2. Dann die Dachlinien in einem Zug
-3. Zurück zur linken unteren Ecke
-4. Die linke Seite nach oben
-5. Die obere Kante nach rechts
-6. Die rechte Seite nach unten
-7. Zum Schluss die Diagonale durch das Quadrat
+1. Zuerst zeichnen wir das Quadrat im Uhrzeigersinn
+2. Dann drehen wir uns um 45 Grad zur ersten Diagonale
+3. Wir zeichnen die Diagonale von unten links nach oben rechts
+4. Danach das Dach: erst zur Spitze, dann zurück
+5. Zum Schluss die zweite Diagonale zurück zum Startpunkt
+
+Die Diagonalen sind länger als die Seiten, weil sie schräg durch das Quadrat gehen. Für ein 100×100 Quadrat ist die Diagonale etwa 141 lang (das ist 100 multipliziert mit der Wurzel aus 2).
 
 </details>
 
