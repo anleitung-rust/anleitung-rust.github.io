@@ -140,7 +140,7 @@ So sollte dein Ergebnis aussehen:
 
 Zeichne einen fünfzackigen Stern! Dies ist etwas anspruchsvoller, weil du einen besonderen Winkel verwenden musst.
 
-**Hinweis:** Bei einem fünfzackigen Stern musst du bei jeder Zacke 144 Grad drehen (das ist 720 ÷ 5). Wiederhole die Bewegung `forward()` und `right(144.0)` fünf Mal.
+**Hinweis:** Bei einem fünfzackigen Stern musst du bei jeder Zacke 144 Grad drehen (das ist 720 ÷ 5). Wiederhole die Bewegung `forward()` und `right(144.0)` fünf Mal. Da du noch keine Schleifen kennst, musst du den Code fünf Mal schreiben – im nächsten Kapitel lernst du, wie du das eleganter lösen kannst!
 
 So sollte dein Ergebnis aussehen:
 
@@ -153,7 +153,7 @@ So sollte dein Ergebnis aussehen:
 {{#include ../codesamples/examples/fuenfstern.rs}}
 ```
 
-**Warum 144 Grad?** Ein Stern hat zwar 5 Zacken, aber die Schildkröte muss sich bei jeder Spitze weiter drehen, um die nächste Zacke zu zeichnen. Der Winkel von 144 Grad ergibt sich aus der Formel: 720 ÷ 5 = 144.
+**Warum 144 Grad?** Ein Stern ist anders als ein regelmäßiges Fünfeck. Die Schildkröte muss sich bei einem Stern stärker drehen, weil sie nicht zur nächsten Ecke geht, sondern eine Ecke überspringt. Um einen fünfzackigen Stern zu zeichnen, muss die Schildkröte insgesamt zwei volle Umdrehungen (720 Grad) machen. Pro Zacke ist das: 720 ÷ 5 = 144 Grad. (Bei einem normalen Fünfeck wären es nur 360 ÷ 5 = 72 Grad.)
 
 </details>
 
