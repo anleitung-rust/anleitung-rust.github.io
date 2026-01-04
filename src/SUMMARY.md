@@ -14,11 +14,12 @@
 # Grundlagen
 
 - [Bewegung und Drehung](./03-bewegung-drehung.md)
-- [Wiederholungen (Schleifen)](./04-wiederholungen.md)
+- [Kreise und gekrümmte Linien](./04-kreise.md)
 - [Farben und Stift](./05-farben-stift.md)
+- [Wiederholungen (Schleifen)](./06-wiederholungen.md)
 
 # Fortgeschritten
 
-- [Variablen](./06-variablen.md)
-- [Funktionen](./07-funktionen.md)
-- [Weitere Beispiele](./08-weitere-beispiele.md)
+- [Variablen](./07-variablen.md)
+- [Funktionen](./08-funktionen.md)
+- [Weitere Beispiele](./09-weitere-beispiele.md)

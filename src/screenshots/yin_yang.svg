@@ -1,0 +1,8 @@
+<svg viewBox="-120.00001 -20 240 240" xmlns="http://www.w3.org/2000/svg">
+<path d="M 0 0 A 100 100 0 0 1 -0.000008742278 200" fill="none" stroke="rgb(0,0,0)" stroke-width="2"/>
+<path d="M -0.000008742278 200 A 50 50 0 0 1 -0.00000754979 100" fill="none" stroke="rgb(0,0,0)" stroke-width="2"/>
+<path d="M -0.00000754979 100 A 50 50 0 0 0 -0.000011920929 0" fill="none" stroke="rgb(0,0,0)" stroke-width="2"/>
+<path d="M -0.000011920929 0 A 100 100 0 0 0 -0.000009535954 200" fill="none" stroke="rgb(0,0,0)" stroke-width="2"/>
+<circle cx="-0.000011721523" cy="150" fill="none" r="5" stroke="rgb(0,0,0)" stroke-width="2"/>
+<circle cx="-0.000016251595" cy="50" fill="none" r="5" stroke="rgb(0,0,0)" stroke-width="2"/>
+</svg>

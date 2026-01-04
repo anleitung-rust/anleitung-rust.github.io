@@ -137,6 +137,40 @@ zeichne_quadrat(&mut turtle, 80.0);
 
 Die Version mit Funktion ist kürzer, klarer und leichter zu ändern!
 
+## Übungsaufgaben
+
+Jetzt bist du dran! Hier sind Aufgaben zum Üben von Funktionen. Denke daran: Mit Funktionen kannst du denselben Code immer wieder aufrufen – und mit Parametern kannst du ihn flexibel gestalten!
+
+### Aufgabe 1: Dreieck-Funktion
+
+Erstelle eine Funktion `zeichne_dreieck()`, die ein gleichseitiges Dreieck zeichnet. Die Funktion soll einen Parameter `groesse` haben, damit du Dreiecke verschiedener Größen zeichnen kannst.
+
+### Aufgabe 2: Viereck und Fünfeck
+
+Schreibe zwei Funktionen:
+- `zeichne_viereck(turtle: &mut TurtlePlan, groesse: f32)` für ein Quadrat
+- `zeichne_fuenfeck(turtle: &mut TurtlePlan, groesse: f32)` für ein regelmäßiges Fünfeck
+
+### Aufgabe 3: Fünfstern-Funktion
+
+Erstelle eine Funktion `zeichne_fuenfstern()`, die einen fünfzackigen Stern zeichnet. Der Stern soll einen Parameter `groesse` haben.
+
+### Aufgabe 4: Herz-Funktion
+
+Schreibe eine Funktion `zeichne_herz()`, die ein Herz zeichnet. Das ist anspruchsvoll – überlege, wie du Kurven mit geraden Linien und Drehungen näherungsweise zeichnen kannst!
+
+### Aufgabe 5: Blume-Funktion
+
+Erstelle eine Funktion `zeichne_blume(turtle: &mut TurtlePlan, blaetter: i32)`, die eine Blume mit mehreren Blütenblättern zeichnet. Die Funktion soll bestimmen können, wie viele Blütenblätter die Blume hat.
+
+**Tipp:** Zeichne ein Blütenblatt (Kreis), drehe die Schildkröte dann um einen Winkel und wiederhole das. Bei `blaetter` Blättern drehst du jeweils um `360 / blaetter` Grad.
+
+### Aufgabe 6: Haus mit Funktionen
+
+Schreibe eine Funktion `zeichne_haus(turtle: &mut TurtlePlan, breite: f32)`, die ein komplettes Haus zeichnet (ein Quadrat mit einem dreieckigen Dach). Die Größe soll über den Parameter `breite` bestimmt werden.
+
+Rufe die Funktion mehrmals auf, um ein ganzes Dorf mit unterschiedlich großen Häusern zu zeichnen! Bewege die Schildkröte zwischen den Häusern mit `forward()` und `backward()`, damit die Häuser nebeneinander stehen.
+
 ## Zusammenfassung
 
 Du hast gelernt:

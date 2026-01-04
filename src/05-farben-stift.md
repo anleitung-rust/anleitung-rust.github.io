@@ -1,6 +1,6 @@
 # Farben und Stift
 
-Du hast gelernt, wie Schleifen dir helfen, Code zu wiederholen und komplexe Formen mit wenig Code zu zeichnen. Jetzt machen wir unsere Zeichnungen bunter! In diesem Kapitel lernst du, wie du die Farbe änderst und den Stift hebst und senkst.
+Du hast gelernt, wie du gerade Linien oder gekrümmte Kurven zeichnest. Jetzt machen wir unsere Zeichnungen bunter! Viele der Beispiele haben schon farben verwendet. In diesem Kapitel lernst du, wie du die Farbe änderst und den Stift hebst und senkst und wie du Flächen füllst.
 
 ## Die Stiftfarbe ändern
 
@@ -26,7 +26,8 @@ Die Turtle-Bibliothek bietet viele vordefinierte Farben:
 - `BLACK` (Schwarz)
 - `WHITE` (Weiß)
 - `GOLD` (Gold)
-- und viele mehr!
+
+Wenn du mehr Farben möchtest, kannst du mit `use macroquad::color::colors::*;` noch mehr Farben verwenden, z.B. `DARKGREEN`, `CYAN`, `MAGENTA` und viele mehr! Eine Liste der Farben bekommt man, wenn man nach dem einbinden von `macroquad::color::colors` die Autovervollständigung des Editors benutzt, also `colors::` eingibt und dann die Vorschläge anschaut.
 
 ## Beispiel: Bunte Linien
 
@@ -98,13 +99,39 @@ turtle.set_pen_width(1.0);  // Dünner Stift
 
 Je größer die Zahl, desto dicker die Linie!
 
-## Kreative Möglichkeiten
+## Übungsaufgaben
 
-Mit diesen Befehlen kannst du jetzt:
-- Bunte Muster zeichnen
-- Formen mit verschiedenen Farben füllen
-- Die Schildkröte bewegen, ohne eine Spur zu hinterlassen
-- Dicke und dünne Linien kombinieren
+Jetzt bist du dran! Hier sind einige Aufgaben, um das Gelernte zu üben.
+
+### Aufgabe 1: Ein ausgefüllter Stern
+
+Zeichne einen fünfzackigen Stern und fülle ihn mit einer Farbe aus!
+
+**Hinweis:** Verwende `begin_fill()` vor dem Zeichnen des Sterns und `end_fill()` danach. Du kannst die Füllfarbe mit `set_fill_color()` setzen und die Randfarbe mit `set_pen_color()` wählen. Für den Stern brauchst du eine Schleife mit 5 Wiederholungen und einem Drehwinkel von 144 Grad.
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Ein ausgefüllter goldener Stern](screenshots/stern_gefuellt.svg)
+
+### Aufgabe 2: Ein Käse
+
+Zeichne ein gelbes Käsestück! Ein Käsestück ist ein Viereck mit drei runden Löchern darin.
+
+**Hinweis:** Zeichne zuerst ein ausgefülltes gelbes Viereck. Dann hebe den Stift (`pen_up()`), bewege die Schildkröte zu verschiedenen Positionen mit `goto(x, y)`, senke den Stift wieder (`pen_down()`) und zeichne drei kleine ausgefüllte weiße Kreise (du kannst einen Kreis zeichnen, indem du ein Vieleck mit vielen Seiten und kleinen Winkeln zeichnest, z.B. 36 Seiten mit je 10 Grad Drehung).
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Ein gelbes Käsestück mit drei weißen Löchern](screenshots/kaese.svg)
+
+### Aufgabe 3: Drei ineinanderliegende Quadrate
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Drei bunte Quadrate, die ineinander liegen](screenshots/drei_quadrate.svg)
+
+Zeichne drei Quadrate, die ineinander liegen, aber sich nicht berühren!
+
+**Hinweis:** Zeichne zuerst ein kleines Quadrat in der Mitte. Dann hebe den Stift (`pen_up()`), bewege die Schildkröte etwas nach links und unten, senke den Stift (`pen_down()`) und zeichne ein größeres Quadrat. Wiederhole das für ein drittes, noch größeres Quadrat. Du kannst auch verschiedene Farben für jedes Quadrat verwenden!
 
 ## Zusammenfassung
 
@@ -117,4 +144,4 @@ Du hast gelernt:
 - `end_fill()` - Beendet das Füllen und füllt die Form aus
 - `set_pen_width(dicke)` - Ändert die Stiftdicke
 
-Im nächsten Kapitel lernst du, wie du Werte speichern und wiederverwenden kannst – mit Variablen!
+Im nächsten Kapitel lernst du, wie du **Schleifen** verwendest, um deine Zeichnungen noch effizienter zu machen!

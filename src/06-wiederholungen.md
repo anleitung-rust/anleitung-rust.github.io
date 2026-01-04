@@ -1,6 +1,6 @@
 # Wiederholungen (Schleifen)
 
-Du kennst jetzt alle wichtigen Bewegungs- und Drehbefehle der Schildkröte. Erinnerst du dich an das Quadrat aus Kapitel 2? Wir mussten den Code viermal schreiben:
+Du kennst jetzt gerade Linien und auch gekrümmte Linien mit Kreisen. Egal ob gerade oder gekrümmt – wenn du die gleiche Bewegung mehrmals hintereinander brauchst, möchtest du das nicht jedes Mal von Hand aufschreiben. In diesem Kapitel lernst du **Schleifen** – damit kannst du Befehle automatisch wiederholen!
 
 ```rust
 turtle.forward(100.0);
@@ -35,37 +35,40 @@ for _ in 0..anzahl {
 - `for` bedeutet "für jede Wiederholung"
 - `0..anzahl` gibt an, wie oft wiederholt wird (von 0 bis anzahl-1)
 - Der Unterstrich `_` bedeutet, dass wir die Zählvariable nicht brauchen
-- Die Befehle in den geschweiften Klammern `{ }` werden wiederholt
+- Die Befehle **innerhalb** der geschweiften Klammern `{ }` werden wiederholt
 
-## Beispiel: Ein Quadrat – jetzt mit Schleife!
+## Aufgabe 1: Ein Quadrat mit Schleife
 
-Erinnere dich an unser Quadrat von vorhin. Mit einer Schleife wird der Code viel kürzer und übersichtlicher:
+Erinnere dich an unser Quadrat von vorhin. Versuche jetzt, ein Quadrat mit einer Schleife zu zeichnen. Das wird viel kürzer und übersichtlicher als den Code viermal zu schreiben!
+
+**Hinweis:** Ein Quadrat hat 4 Seiten. Die Formel 360 ÷ 4 = 90 Grad zeigt dir den Drehwinkel.
+
+So sollte dein Ergebnis aussehen:
+
+![Ergebnis: Ein rotes Quadrat mit Schleife gezeichnet](screenshots/quadrat_schleife.svg)
+
+### Lösungsblock
+
+<details>
+<summary>Zeige die Lösung</summary>
 
 ```rust
 {{#include ../codesamples/examples/quadrat_schleife.rs}}
 ```
 
-![Ergebnis: Ein rotes Quadrat mit Schleife gezeichnet](screenshots/quadrat_schleife.svg)
+Statt 8 Zeilen Code haben wir jetzt nur noch 3 Zeilen in der Schleife. Das macht genau das Gleiche wie der lange Code vorher, ist aber viel einfacher zu lesen und zu verstehen!
 
-Wow! Statt 8 Zeilen Code haben wir jetzt nur noch 3 Zeilen in der Schleife. Das macht genau das Gleiche wie der lange Code vorher, ist aber viel einfacher zu lesen und zu verstehen!
+</details>
 
-## Beispiel: Ein Achteck
+## Aufgabe 2: Ein Achteck
 
-Ein Achteck hat 8 gleich lange Seiten. Wir können es mit einer Schleife zeichnen:
+Ein Achteck hat 8 gleich lange Seiten. Versuche, es mit einer Schleife zu zeichnen.
 
-```rust
-{{#include ../codesamples/examples/achteck.rs}}
-```
+**Hinweis:** Verwende die Formel 360 ÷ 8 = 45 Grad für den Drehwinkel. Du brauchst eine Schleife mit 8 Wiederholungen.
+
+So sollte dein Ergebnis aussehen:
 
 ![Ergebnis: Ein gelbes Achteck](screenshots/achteck.svg)
-
-### Wie funktioniert das?
-
-- Die Schleife wiederholt sich 8 mal (`0..8`)
-- In jeder Wiederholung:
-  - Geht die Schildkröte 50 Schritte vorwärts
-  - Dreht sie sich 45 Grad nach rechts (360 ÷ 8 = 45)
-- Nach 8 Wiederholungen ist das Achteck fertig!
 
 ## Die Formel für regelmäßige Vielecke
 
@@ -80,17 +83,15 @@ Beispiele:
 - Sechseck (6 Seiten): 360 ÷ 6 = 60 Grad
 - Achteck (8 Seiten): 360 ÷ 8 = 45 Grad
 
-## Beispiel: Ein Stern
+## Aufgabe 3: Ein Stern
 
-Wollen wir etwas Komplexeres zeichnen? Wie wäre es mit einem Stern?
+Wollen wir etwas Komplexeres zeichnen? Versuche, einen fünfzackigen Stern zu zeichnen!
 
-```rust
-{{#include ../codesamples/examples/stern.rs}}
-```
+**Hinweis:** Ein fünfzackiger Stern braucht einen anderen Winkel als ein regelmäßiges Fünfeck. Hier verwendest du 144 Grad (das ist 720 ÷ 5). Du brauchst eine Schleife mit 5 Wiederholungen.
+
+So sollte dein Ergebnis aussehen:
 
 ![Ergebnis: Ein fünfzackiger Stern in Orange](screenshots/stern.svg)
-
-Ein fünfzackiger Stern braucht einen anderen Winkel als ein regelmäßiges Fünfeck. Hier verwenden wir 144 Grad (das ist 720 ÷ 5).
 
 ## Warum sind Schleifen nützlich?
 
@@ -99,7 +100,7 @@ Schleifen sind sehr nützlich, weil:
 2. **Weniger Fehler**: Du kannst dich nicht vertippen, wenn du nur einmal schreibst
 3. **Leichter zu ändern**: Willst du ein Zehneck statt eines Achtecks? Ändere einfach die `8` zu `10`!
 
-## Probiere es selbst!
+## Weitere Aufgaben zum Üben
 
 Versuche, diese Formen zu zeichnen:
 - Ein Dreieck (3 Seiten, 120 Grad)
@@ -114,4 +115,4 @@ Du hast gelernt:
 - Die Formel für regelmäßige Vielecke: 360 ÷ anzahl_seiten
 - Dass Schleifen den Code kürzer und einfacher machen
 
-Im nächsten Kapitel lernst du, wie du mit Farben arbeitest und den Stift heben und senken kannst.
+Im nächsten Kapitel lernst du, wie du Werte speichern und wiederverwenden kannst – mit Variablen!
