@@ -27,7 +27,7 @@ So fragst du nach einem Namen:
 Oft möchtest du eine Zahl haben:
 
 ```rust
-{{#include ../codesamples/examples/eingabe_zahl.rs}}
+{{#include ../codesamples/examples/eingabe_zahl_einfach.rs:main}}
 ```
 
 Mit `.parse()` wird der Text in eine Zahl umgewandelt.  
