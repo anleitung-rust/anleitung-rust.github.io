@@ -87,7 +87,7 @@ Für Spiele ist es oft nützlich, ein zufälliges Element auszuwählen:
 {{#include ../codesamples/examples/vektor_zufaellig.rs}}
 ```
 
-Hier verwenden wir die `rand`-Bibliothek, um einen zufälligen Index zu erzeugen.
+Hier verwenden wir die Funktion `gen_range` aus der `macroquad`-Bibliothek, um einen zufälligen Index zu erzeugen.
 
 ## Vektoren mit Text
 
@@ -205,7 +205,7 @@ Erstelle ein Programm, das einen sechsseitigen Würfel simuliert:
 - Wähle zufällig eine Zahl aus
 - Gib die gewürfelte Zahl aus
 
-**Tipp:** Verwende `rand::thread_rng().gen_range(0..6)` für einen zufälligen Index.
+**Tipp:** Verwende `macroquad::rand::gen_range(0, 6)` für einen zufälligen Index.
 
 ### Aufgabe 6: Einkaufsliste
 
