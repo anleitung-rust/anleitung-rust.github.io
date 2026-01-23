@@ -23,3 +23,10 @@
 - [Variablen](./07-variablen.md)
 - [Funktionen](./08-funktionen.md)
 - [Weitere Beispiele](./09-weitere-beispiele.md)
+
+# Mehr über Daten
+
+- [Strings und Text](./10-strings.md)
+- [Sammlungen: Vektoren und Arrays](./11-sammlungen.md)
+- [Strukturen (Structs)](./12-structs.md)
+- [Enums und Zustände](./13-enums.md)
