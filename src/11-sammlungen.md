@@ -1,191 +1,118 @@
-# Sammlungen: Listen von Dingen (Vektoren)
+# Sammlungen: Listen
 
-Im letzten Kapitel hast du gelernt, wie man mit einzelnen Texten arbeitet. Aber was, wenn du mehrere Wörter, viele Zahlen oder eine ganze Liste von Werten speichern möchtest? Hier kommen **Sammlungen** ins Spiel! Sie sind wie Schubladen mit mehreren Fächern, in denen du viele Werte gleichzeitig aufbewahren kannst.
+Im letzten Kapitel hast du gelernt, wie man einen Text speichert. Aber was, wenn du mehrere Wörter oder Zahlen speichern möchtest? Dafür gibt es **Listen**!
 
 ## Was ist eine Liste?
 
-Eine **Liste** (oder Sammlung) ist eine geordnete Folge von Werten. Stell dir vor:
-- Ein Regal mit nummerierten Fächern (0, 1, 2, 3...)
-- Jedes Fach enthält einen Wert
-- Du kannst auf jedes Fach über seine Nummer zugreifen
+Eine **Liste** ist wie eine Reihe von Schubladen, in denen du mehrere Werte aufbewahren kannst.
 
-In Rust verwenden wir dafür **Vektoren (Vec)** - flexible Listen, die wachsen und schrumpfen können.
-
-## Was ist ein Vektor (Vec)?
-
-Ein **Vektor** ist eine flexible Liste. Du kannst Elemente hinzufügen oder entfernen, und die Liste passt sich automatisch an.
-
-So erstellst du einen leeren Vektor:
+In Rust heißt eine Liste **Vec** (kurz für "Vektor"):
 
 ```rust
-let mut zahlen: Vec<i32> = Vec::new();
+let zahlen = vec![10, 20, 30, 40];
 ```
 
-- `Vec<i32>` bedeutet "Vektor von ganzen Zahlen"
-- `Vec::new()` erstellt einen neuen, leeren Vektor
-- `mut` ist wichtig, damit wir Elemente hinzufügen können
+## Eine Liste erstellen
 
-## Einen Vektor mit Werten erstellen
-
-Meist ist es einfacher, direkt Werte anzugeben:
+So erstellst du eine Liste:
 
 ```rust
-{{#include ../codesamples/examples/vektor_erstellen.rs}}
+let farben = vec!["Rot", "Grün", "Blau"];
 ```
 
-Mit `vec![]` erstellst du einen Vektor und gibst die Werte in eckigen Klammern an.
+- `vec!` erstellt eine neue Liste
+- Die Werte stehen in eckigen Klammern `[]`
+- Die Werte werden mit Komma getrennt
 
 ## Auf Elemente zugreifen
 
-Du kannst auf einzelne Elemente über ihre **Indexnummer** zugreifen:
+Jedes Element in der Liste hat eine Nummer (Index). Die Zählung beginnt bei 0!
 
 ```rust
-{{#include ../codesamples/examples/vektor_zugriff.rs}}
+let tiere = vec!["Hund", "Katze", "Vogel"];
+
+println!("{}", tiere[0]);  // Gibt aus: Hund
+println!("{}", tiere[1]);  // Gibt aus: Katze
+println!("{}", tiere[2]);  // Gibt aus: Vogel
 ```
 
-**Wichtig:** Die Zählung beginnt bei 0!
-- Erstes Element: Index 0
-- Zweites Element: Index 1
-- Drittes Element: Index 2
-- usw.
+## Übung: Turtle mit Farben
 
-## Elemente hinzufügen
-
-Mit `.push()` fügst du ein Element am Ende hinzu:
+Probier dieses Programm aus:
 
 ```rust
-{{#include ../codesamples/examples/vektor_push.rs}}
+use turtle_lib::*;
+
+#[turtle_main]
+fn main() {
+    let farben = vec![RED, GREEN, BLUE];
+    
+    for farbe in &farben {
+        turtle.set_pen_color(*farbe);
+        turtle.forward(50.0);
+        turtle.right(120.0);
+    }
+}
 ```
 
-Der Vektor wächst automatisch, wenn du Elemente hinzufügst!
+Was zeichnet das Programm? Ändere die Farben und probiere es aus!
 
-## Durch einen Vektor iterieren
+## Durch eine Liste gehen
 
-Du kannst mit einer Schleife durch alle Elemente gehen:
+Mit einer `for`-Schleife kannst du alle Elemente durchgehen:
 
 ```rust
-{{#include ../codesamples/examples/vektor_schleife.rs}}
+let zahlen = vec![5, 10, 15];
+
+for zahl in &zahlen {
+    println!("{}", zahl);
+}
 ```
 
-Hier geht die Schleife durch jedes Element im Vektor. `&farben` bedeutet "alle Elemente von farben".
+Das gibt aus:
+```
+5
+10
+15
+```
 
-## Anzahl der Elemente
+## Übung: Mehrere Quadrate
 
-Mit `.len()` erfährst du, wie viele Elemente ein Vektor hat:
+Erstelle ein Programm, das:
+- Eine Liste mit Größen hat: `vec![30.0, 50.0, 70.0]`
+- Für jede Größe ein Quadrat zeichnet
+- Die Turtle zwischen den Quadraten bewegt
+
+<details>
+<summary>Tipp</summary>
 
 ```rust
-{{#include ../codesamples/examples/vektor_laenge.rs}}
+use turtle_lib::*;
+
+#[turtle_main]
+fn main() {
+    let groessen = vec![30.0, 50.0, 70.0];
+    
+    for groesse in &groessen {
+        // Zeichne ein Quadrat mit dieser Größe
+        for _ in 0..4 {
+            turtle.forward(*groesse);
+            turtle.right(90.0);
+        }
+        // Bewege dich nach rechts
+        turtle.pen_up();
+        turtle.forward(groesse + 20.0);
+        turtle.pen_down();
+    }
+}
 ```
-
-## Einen zufälligen Wert auswählen
-
-Für Spiele ist es oft nützlich, ein zufälliges Element auszuwählen:
-
-```rust
-{{#include ../codesamples/examples/vektor_zufaellig.rs}}
-```
-
-Hier verwenden wir die Funktion `gen_range` aus der `macroquad`-Bibliothek, um einen zufälligen Index zu erzeugen.
-
-## Vektoren mit Text
-
-Vektoren können auch Strings enthalten:
-
-```rust
-{{#include ../codesamples/examples/vektor_strings.rs}}
-```
-
-Mit `.to_string()` wandelst du `&str` in `String` um.
-
-## Anwendung: Wortliste für Hangman
-
-Für ein Hangman-Spiel brauchen wir eine Liste von Wörtern, aus der wir zufällig eines auswählen:
-
-```rust
-{{#include ../codesamples/examples/vektor_hangman.rs}}
-```
-
-Das ist perfekt für ein Ratespiel! Bei jedem Start wird ein neues, zufälliges Wort gewählt.
-
-## Wichtige Methoden für Vektoren
-
-Hier sind die wichtigsten Operationen auf einen Blick:
-
-```rust
-let mut v = vec![1, 2, 3];
-
-v.push(4);              // Element hinzufügen
-v.len();                // Anzahl der Elemente
-v[0];                   // Erstes Element
-v.is_empty();           // Prüfen, ob leer
-v.contains(&2);         // Prüfen, ob Element enthalten ist
-v.clear();              // Alle Elemente entfernen
-```
+</details>
 
 ## Zusammenfassung
 
-Du hast gelernt:
-- `Vec::new()` oder `vec![...]` - Erstellt einen Vektor
-- `vektor[index]` - Greift auf ein Element zu (Index beginnt bei 0!)
-- `.push(wert)` - Fügt ein Element hinzu
-- `for element in &vektor { }` - Durchläuft alle Elemente
-- `.len()` - Gibt die Anzahl der Elemente zurück
-- Vektoren sind flexible und dynamische Sammlungen
+- Listen speichern mehrere Werte: `vec![1, 2, 3]`
+- Index beginnt bei 0: `liste[0]` ist das erste Element
+- `for element in &liste` geht durch alle Elemente
+- Listen sind praktisch für mehrere gleiche Dinge
 
-## Übungsaufgaben
-
-### Aufgabe 1: Lieblingszahlen
-
-Erstelle einen Vektor mit deinen 5 Lieblingszahlen und gib sie alle aus.
-
-**Tipp:** Verwende `vec![]` zum Erstellen und eine Schleife zum Ausgeben.
-
-### Aufgabe 2: Namen sammeln
-
-Erstelle einen leeren Vektor und füge 3 Namen deiner Freunde hinzu. Gib dann alle Namen aus.
-
-**Tipp:** Verwende `Vec::new()`, dann `.push()` für jeden Namen.
-
-### Aufgabe 3: Summe berechnen
-
-Erstelle einen Vektor mit Zahlen und berechne die Summe aller Zahlen.
-
-**Tipp:** Verwende eine Schleife und eine Variable, um die Summe aufzuaddieren.
-
-### Aufgabe 4: Tier-Liste
-
-Erstelle einen Vektor mit Tiernamen. Lass das Programm ausgeben:
-- Wie viele Tiere es gibt
-- Das erste und letzte Tier
-- Alle Tiere nacheinander
-
-### Aufgabe 5: Würfel simulieren
-
-Erstelle ein Programm, das einen sechsseitigen Würfel simuliert:
-- Erstelle einen Vektor mit den Zahlen 1-6
-- Wähle zufällig eine Zahl aus
-- Gib die gewürfelte Zahl aus
-
-**Tipp:** Verwende `macroquad::rand::gen_range(0, 6)` für einen zufälligen Index.
-
-### Aufgabe 6: Einkaufsliste
-
-Erstelle eine Einkaufsliste als Vektor mit mindestens 5 Produkten. Gib die Liste nummeriert aus:
-```
-1. Äpfel
-2. Brot
-3. Milch
-...
-```
-
-**Tipp:** Du kannst in der Schleife einen Zähler mitführen.
-
-## Wichtige Hinweise
-
-1. **Index beginnt bei 0**: Das erste Element ist `vektor[0]`, nicht `vektor[1]`!
-2. **mut bei Vektoren**: Wenn du Elemente hinzufügen willst, brauchst du `mut`
-3. **Typen sind einheitlich**: Alle Elemente müssen den gleichen Typ haben
-4. **Grenzen beachten**: `vektor[10]` stürzt ab, wenn der Vektor nur 5 Elemente hat!
-5. **Vektoren sind die beste Wahl**: Für die meisten Fälle solltest du Vektoren verwenden
-
-Im nächsten Kapitel lernst du **Strukturen (Structs)** kennen – damit kannst du eigene, komplexere Datentypen erstellen. Das ist wichtig, um den Zustand eines Spiels zu organisieren!
+Im nächsten Kapitel lernst du **Structs** – damit kannst du zusammengehörige Daten gruppieren!

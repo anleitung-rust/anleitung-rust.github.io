@@ -1,236 +1,139 @@
 # Strukturen (Structs)
 
-In den letzten Kapiteln hast du gelernt, wie man einzelne Werte (Strings, Zahlen) und Listen (Vektoren) speichert. Aber was, wenn du zusammengehörige Daten als eine Einheit behandeln möchtest? Hier kommen **Strukturen** (Structs) ins Spiel! Mit Structs kannst du deine eigenen Datentypen erstellen.
+Du kannst jetzt einzelne Werte und Listen speichern. Aber was, wenn zusammengehörige Dinge eine Einheit bilden sollen? Dafür gibt es **Structs**!
 
 ## Was ist ein Struct?
 
-Ein **Struct** (kurz für "Structure" = Struktur) ist wie eine Karteikarte mit mehreren beschrifteten Feldern. Stell dir vor, du hast eine Karteikarte für eine Person:
+Ein **Struct** ist wie eine Karteikarte mit mehreren Feldern. Zum Beispiel für eine Person:
 
 ```
-┌─────────────────────┐
-│ Name:   Anna        │
-│ Alter:  12          │
-│ Stadt:  Berlin      │
-└─────────────────────┘
+┌─────────────────┐
+│ Name:   Anna    │
+│ Alter:  12      │
+│ Stadt:  Berlin  │
+└─────────────────┘
 ```
 
-In Rust sieht das so aus:
+## Einen Struct definieren
+
+So erstellst du einen eigenen Datentyp:
 
 ```rust
 struct Person {
     name: String,
     alter: u32,
-    stadt: String,
 }
 ```
 
-## Warum Structs verwenden?
-
-Structs helfen dir:
-1. **Zusammengehörige Daten gruppieren**: Name, Alter und Stadt gehören zusammen
-2. **Code organisieren**: Alles über eine Person steht an einem Ort
-3. **Fehler vermeiden**: Du kannst keine Stadt vergessen, wenn sie Teil des Structs ist
-4. **Lesbarkeit**: Der Code wird klarer und verständlicher
-
-## Einen Struct definieren
-
-So definierst du einen eigenen Datentyp:
-
-```rust
-{{#include ../codesamples/examples/struct_definition.rs}}
-```
-
-- `struct` leitet die Definition ein
-- `Punkt` ist der Name des Structs (groß geschrieben!)
+- `struct` bedeutet "Struktur"
+- `Person` ist der Name (groß geschrieben!)
 - Die Felder stehen in geschweiften Klammern
-- Jedes Feld hat einen Namen und einen Typ
 
-## Eine Instanz erstellen
+## Einen Struct verwenden
 
-So erstellst du eine konkrete Instanz (ein Exemplar) eines Structs:
+So erstellst du eine Person:
 
-```rust
-{{#include ../codesamples/examples/struct_instanz.rs}}
-```
-
-Hier füllen wir die "Karteikarte" mit konkreten Werten aus.
-
-## Auf Felder zugreifen
-
-Mit einem Punkt `.` greifst du auf die Felder zu:
-
-```rust
-{{#include ../codesamples/examples/struct_zugriff.rs}}
-```
-
-Das funktioniert wie bei den Methoden, die du schon kennst (z.B. `text.len()`).
-
-## Felder ändern
-
-Um Felder zu ändern, brauchst du `mut`:
-
-```rust
-{{#include ../codesamples/examples/struct_aendern.rs}}
-```
-
-Ohne `mut` sind alle Felder unveränderlich!
-
-## Struct mit Methoden
-
-Du kannst Funktionen direkt an einen Struct binden. Das nennt man **Methoden**:
-
-```rust
-{{#include ../codesamples/examples/struct_methoden.rs}}
-```
-
-Mit `impl` (für "implementation") definierst du Methoden für einen Struct.
-- `&self` bedeutet "diese Instanz"
-- Methoden werden mit dem Punkt aufgerufen: `rechteck.flaeche()`
-
-## Anwendung: Spieler in einem Spiel
-
-Für ein Spiel könntest du einen Spieler so modellieren:
-
-```rust
-{{#include ../codesamples/examples/struct_spieler.rs}}
-```
-
-Hier haben wir einen Struct, der den Zustand eines Spielers speichert, und Methoden, um damit zu arbeiten.
-
-## Anwendung: Hangman-Spielzustand
-
-Für das Hangman-Spiel brauchen wir verschiedene Informationen:
-
-```rust
-{{#include ../codesamples/examples/struct_hangman.rs}}
-```
-
-Der Struct organisiert alle wichtigen Daten des Spiels an einem Ort!
-
-## Mehrere Structs kombinieren
-
-Structs können andere Structs enthalten:
-
-```rust
-{{#include ../codesamples/examples/struct_kombiniert.rs}}
-```
-
-So kannst du komplexe Datenstrukturen aufbauen!
-
-## Structs und Vektoren
-
-Du kannst Vektoren von Structs erstellen:
-
-```rust
-{{#include ../codesamples/examples/struct_vektor.rs}}
-```
-
-Das ist perfekt für Listen von Spielern, Gegnern, oder anderen Objekten!
-
-## Der Unterschied zu Variablen
-
-**Variable**:
-```rust
-let x = 10;
-let name = "Anna";
-```
-→ Einzelne, unabhängige Werte
-
-**Struct**:
 ```rust
 let person = Person {
-    name: "Anna".to_string(),
+    name: String::from("Max"),
     alter: 12,
 };
+
+println!("Name: {}", person.name);
+println!("Alter: {}", person.alter);
 ```
-→ Mehrere zusammengehörige Werte als Einheit
 
-## Wichtige Begriffe
+Mit dem Punkt `.` greifst du auf die Felder zu.
 
-- **Struct**: Die Definition (das "Rezept")
-- **Instanz**: Ein konkretes Exemplar (die "fertige Torte nach Rezept")
-- **Feld**: Eine Variable innerhalb des Structs
-- **Methode**: Eine Funktion, die zu einem Struct gehört
-- **impl**: Block, in dem Methoden definiert werden
+## Übung: Rechteck mit Struct
+
+Probier dieses Beispiel aus:
+
+```rust
+use turtle_lib::*;
+
+struct Rechteck {
+    breite: f32,
+    hoehe: f32,
+}
+
+#[turtle_main]
+fn main() {
+    let rechteck = Rechteck {
+        breite: 100.0,
+        hoehe: 60.0,
+    };
+    
+    // Zeichne das Rechteck
+    for _ in 0..2 {
+        turtle.forward(rechteck.breite);
+        turtle.right(90.0);
+        turtle.forward(rechteck.hoehe);
+        turtle.right(90.0);
+    }
+}
+```
+
+Ändere die Breite und Höhe und schau, was passiert!
+
+## Mehrere Structs
+
+Du kannst mehrere Rechtecke erstellen:
+
+```rust
+let rechteck1 = Rechteck { breite: 80.0, hoehe: 40.0 };
+let rechteck2 = Rechteck { breite: 120.0, hoehe: 60.0 };
+```
+
+## Übung: Drei Rechtecke
+
+Erstelle ein Programm, das:
+- Drei verschiedene Rechtecke definiert
+- Alle drei nacheinander zeichnet
+- Die Turtle dazwischen bewegt
+
+<details>
+<summary>Lösung (nur anschauen, wenn du nicht weiterkommst!)</summary>
+
+```rust
+use turtle_lib::*;
+
+struct Rechteck {
+    breite: f32,
+    hoehe: f32,
+}
+
+#[turtle_main]
+fn main() {
+    let rechtecke = vec![
+        Rechteck { breite: 50.0, hoehe: 30.0 },
+        Rechteck { breite: 70.0, hoehe: 40.0 },
+        Rechteck { breite: 90.0, hoehe: 50.0 },
+    ];
+    
+    for rechteck in &rechtecke {
+        // Zeichne Rechteck
+        for _ in 0..2 {
+            turtle.forward(rechteck.breite);
+            turtle.right(90.0);
+            turtle.forward(rechteck.hoehe);
+            turtle.right(90.0);
+        }
+        
+        // Bewege nach rechts
+        turtle.pen_up();
+        turtle.forward(rechteck.breite + 20.0);
+        turtle.pen_down();
+    }
+}
+```
+</details>
 
 ## Zusammenfassung
 
-Du hast gelernt:
-- `struct Name { felder }` - Definiert einen eigenen Datentyp
-- `let instanz = Name { werte }` - Erstellt eine Instanz
-- `instanz.feld` - Greift auf ein Feld zu
-- `impl Name { fn methode() }` - Definiert Methoden
-- `&self` in Methoden - Bezieht sich auf die Instanz
 - Structs gruppieren zusammengehörige Daten
-- Structs machen Code organisierter und lesbarer
+- Definition: `struct Name { feld: Typ, ... }`
+- Verwendung: `instanz.feld`
+- Structs machen Code übersichtlicher
 
-## Übungsaufgaben
-
-### Aufgabe 1: Buch-Struct
-
-Erstelle einen Struct `Buch` mit den Feldern:
-- `titel` (String)
-- `autor` (String)
-- `seiten` (u32)
-
-Erstelle dann 2-3 Bücher und gib ihre Informationen aus.
-
-### Aufgabe 2: Auto mit Methoden
-
-Erstelle einen Struct `Auto` mit:
-- `marke` (String)
-- `geschwindigkeit` (u32)
-
-Implementiere Methoden:
-- `beschleunigen(&mut self, wert: u32)` - Erhöht die Geschwindigkeit
-- `bremsen(&mut self, wert: u32)` - Verringert die Geschwindigkeit
-- `anzeigen(&self)` - Gibt die Informationen aus
-
-### Aufgabe 3: Rechteck-Rechner
-
-Erstelle einen Struct `Rechteck` mit:
-- `breite` (f32)
-- `hoehe` (f32)
-
-Implementiere Methoden:
-- `flaeche(&self) -> f32` - Berechnet die Fläche
-- `umfang(&self) -> f32` - Berechnet den Umfang
-- `ist_quadrat(&self) -> bool` - Prüft, ob es ein Quadrat ist
-
-### Aufgabe 4: Kontakt-Liste
-
-Erstelle einen Struct `Kontakt` mit:
-- `name` (String)
-- `telefon` (String)
-
-Erstelle einen Vektor von Kontakten und gib alle aus.
-
-### Aufgabe 5: Punkteverwaltung
-
-Erstelle einen Struct `Spielstand` mit:
-- `spieler_name` (String)
-- `punkte` (u32)
-- `highscore` (u32)
-
-Implementiere Methoden:
-- `punkte_hinzufuegen(&mut self, punkte: u32)` - Fügt Punkte hinzu
-- `neuer_highscore(&mut self)` - Aktualisiert den Highscore, falls die aktuellen Punkte höher sind
-
-### Aufgabe 6: Monster-Kampf
-
-Erstelle einen Struct `Monster` mit:
-- `name` (String)
-- `leben` (u32)
-- `angriff` (u32)
-
-Implementiere eine Methode `angreifen(&self, gegner: &mut Monster)`, die dem Gegner Schaden zufügt.
-
-## Wichtige Hinweise
-
-1. **Struct-Namen groß**: `Person`, nicht `person`
-2. **Feldnamen klein**: `name`, nicht `Name`
-3. **mut für Änderungen**: Struct braucht `mut`, wenn Felder geändert werden
-4. **&self in Methoden**: Für Lesezugriff; `&mut self` für Änderungen
-5. **Alle Felder angeben**: Beim Erstellen musst du alle Felder ausfüllen
-
-Im nächsten Kapitel lernst du **Enums** kennen – damit kannst du verschiedene Zustände oder Varianten modellieren. Das ist perfekt, um zu prüfen, ob ein Spiel gewonnen, verloren oder noch läuft!
+Im nächsten Kapitel lernst du **Enums** – für Dinge, die verschiedene Zustände haben können!

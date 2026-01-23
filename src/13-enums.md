@@ -1,17 +1,10 @@
 # Enums und Zustände
 
-Im letzten Kapitel hast du gelernt, wie man mit Structs zusammengehörige Daten gruppiert. Aber manchmal brauchst du etwas anderes: Du möchtest sagen "Es kann **entweder** dies **oder** das sein". Hier kommen **Enums** ins Spiel! Mit Enums kannst du verschiedene Varianten oder Zustände modellieren.
+Du kennst jetzt Structs für zusammengehörige Daten. Aber was, wenn etwas verschiedene Zustände haben kann? Dafür gibt es **Enums**!
 
 ## Was ist ein Enum?
 
-Ein **Enum** (kurz für "Enumeration" = Aufzählung) ist ein Typ mit mehreren möglichen Varianten. Stell dir vor:
-
-Ein Ampelzustand kann sein:
-- Rot
-- Gelb
-- Grün
-
-Aber niemals zwei gleichzeitig! Ein Enum ist perfekt dafür:
+Ein **Enum** (Aufzählung) definiert, welche Möglichkeiten es gibt. Zum Beispiel eine Ampel:
 
 ```rust
 enum Ampel {
@@ -21,190 +14,120 @@ enum Ampel {
 }
 ```
 
-## Warum Enums verwenden?
+Eine Ampel ist **entweder** rot **oder** gelb **oder** grün – aber niemals zwei gleichzeitig!
 
-Enums helfen dir:
-1. **Zustände modellieren**: Ein Spiel kann "Läuft", "Gewonnen" oder "Verloren" sein
-2. **Fehler vermeiden**: Der Compiler prüft, dass du alle Fälle behandelst
-3. **Klarheit**: Der Code zeigt deutlich, welche Möglichkeiten es gibt
-4. **Sicherheit**: Du kannst keine ungültigen Zustände erstellen
+## Einen Enum verwenden
 
-## Einen Enum definieren
-
-So definierst du einen Enum:
+So verwendest du einen Enum:
 
 ```rust
-{{#include ../codesamples/examples/enum_definition.rs}}
+let farbe = Ampel::Rot;
 ```
 
-- `enum` leitet die Definition ein
-- `Richtung` ist der Name des Enums (groß geschrieben!)
-- Die Varianten stehen in geschweiften Klammern
-- Jede Variante wird mit Komma getrennt
-
-## Enum-Werte erstellen
-
-So verwendest du eine Variante:
+Mit `match` kannst du auf verschiedene Werte reagieren:
 
 ```rust
-{{#include ../codesamples/examples/enum_werte.rs}}
+match farbe {
+    Ampel::Rot => println!("Stopp!"),
+    Ampel::Gelb => println!("Achtung!"),
+    Ampel::Gruen => println!("Fahr!"),
+}
 ```
 
-Mit `::` wählst du eine Variante aus.
+## Übung: Turtle mit Richtung
 
-## Match: Entscheidungen treffen
-
-Das Besondere an Enums ist `match` – damit kannst du für jede Variante etwas anderes tun:
+Probier dieses Beispiel:
 
 ```rust
-{{#include ../codesamples/examples/enum_match.rs}}
+use turtle_lib::*;
+
+enum Richtung {
+    Oben,
+    Rechts,
+    Unten,
+    Links,
+}
+
+#[turtle_main]
+fn main() {
+    let richtung = Richtung::Rechts;
+    
+    match richtung {
+        Richtung::Oben => turtle.right(0.0),
+        Richtung::Rechts => turtle.right(90.0),
+        Richtung::Unten => turtle.right(180.0),
+        Richtung::Links => turtle.right(270.0),
+    }
+    
+    turtle.forward(100.0);
+}
 ```
 
-**Match ist super stark!**
-- Du musst alle Varianten behandeln (der Compiler prüft das!)
-- Du kannst für jede Variante anderen Code ausführen
-- Es ist sicherer als viele `if-else`
+Ändere die Richtung und schau, was passiert!
 
-## Enums mit Daten
+## Enum für Spielzustand
 
-Enums können auch Daten enthalten:
+Enums sind perfekt für Spielzustände:
 
 ```rust
-{{#include ../codesamples/examples/enum_mit_daten.rs}}
+enum Spielstand {
+    Laeuft,
+    Gewonnen,
+    Verloren,
+}
+
+let zustand = Spielstand::Laeuft;
+
+match zustand {
+    Spielstand::Laeuft => println!("Spiel läuft noch..."),
+    Spielstand::Gewonnen => println!("Du hast gewonnen! 🎉"),
+    Spielstand::Verloren => println!("Verloren 💀"),
+}
 ```
 
-Hier hat jede Variante eigene Daten! Das ist sehr mächtig.
+## Übung: Turtle-Quadrat mit Farbe
 
-## Anwendung: Spielzustand
+Erstelle ein Programm, das:
+- Einen Enum `Farbe` mit `Rot`, `Gruen`, `Blau` hat
+- Je nach gewählter Farbe ein Quadrat in dieser Farbe zeichnet
 
-Für ein Spiel ist ein Enum perfekt, um den Zustand zu modellieren:
+<details>
+<summary>Tipp</summary>
 
 ```rust
-{{#include ../codesamples/examples/enum_spielzustand.rs}}
+use turtle_lib::*;
+
+enum Farbe {
+    Rot,
+    Gruen,
+    Blau,
+}
+
+#[turtle_main]
+fn main() {
+    let farbe = Farbe::Gruen;  // Ändere das!
+    
+    match farbe {
+        Farbe::Rot => turtle.set_pen_color(RED),
+        Farbe::Gruen => turtle.set_pen_color(GREEN),
+        Farbe::Blau => turtle.set_pen_color(BLUE),
+    }
+    
+    // Zeichne Quadrat
+    for _ in 0..4 {
+        turtle.forward(80.0);
+        turtle.right(90.0);
+    }
+}
 ```
-
-So kannst du klar zwischen verschiedenen Spielzuständen unterscheiden!
-
-## Anwendung: Hangman-Ergebnis
-
-Für Hangman können wir das Spielergebnis mit einem Enum modellieren:
-
-```rust
-{{#include ../codesamples/examples/enum_hangman.rs}}
-```
-
-Mit `match` entscheiden wir, was zu tun ist – je nach Spielzustand!
-
-## Enums in Structs
-
-Du kannst Enums in Structs verwenden:
-
-```rust
-{{#include ../codesamples/examples/enum_in_struct.rs}}
-```
-
-So kombinierst du die Stärken von Structs und Enums!
-
-## Enum-Methoden
-
-Wie bei Structs kannst du auch Enums Methoden geben:
-
-```rust
-{{#include ../codesamples/examples/enum_methoden.rs}}
-```
+</details>
 
 ## Zusammenfassung
 
-Du hast gelernt:
-- `enum Name { Variante1, Variante2 }` - Definiert einen Enum
-- `Name::Variante` - Wählt eine Variante
-- `match wert { Variante => ... }` - Entscheidet basierend auf Variante
-- Enums können Daten enthalten
-- Enums modellieren "entweder-oder"-Situationen
+- Enums definieren Auswahlmöglichkeiten
+- Definition: `enum Name { Variante1, Variante2, ... }`
+- Verwendung: `Name::Variante`
+- `match` reagiert auf verschiedene Varianten
+- Perfekt für Zustände (Ampel, Spielstand, Richtung)
 
-## Übungsaufgaben
-
-### Aufgabe 1: Wochentag
-
-Erstelle einen Enum `Wochentag` mit allen sieben Tagen. Schreibe eine Funktion, die mit `match` ausgibt, ob es ein Werktag oder Wochenende ist.
-
-### Aufgabe 2: Verkehrsmittel
-
-Erstelle einen Enum `Verkehrsmittel` mit:
-- `Auto(String)` - mit Marke
-- `Fahrrad`
-- `Bahn(u32)` - mit Liniennummer
-
-Schreibe Code, der verschiedene Verkehrsmittel ausgibt.
-
-### Aufgabe 3: Taschenrechner
-
-Erstelle einen Enum `Operation` mit:
-- `Addition(f32, f32)`
-- `Subtraktion(f32, f32)`
-- `Multiplikation(f32, f32)`
-- `Division(f32, f32)`
-
-Schreibe eine Funktion `berechne(op: Operation) -> f32`, die mit `match` das Ergebnis berechnet.
-
-### Aufgabe 4: Anmeldestatus
-
-Erstelle einen Enum `AnmeldeStatus` mit:
-- `Angemeldet(String)` - mit Benutzernamen
-- `Abgemeldet`
-
-Schreibe Code, der prüft, ob jemand angemeldet ist, und ggf. den Namen ausgibt.
-
-### Aufgabe 5: Spielaktion
-
-Erstelle einen Enum `Aktion` für ein Spiel mit:
-- `Bewegen(i32, i32)` - mit x- und y-Koordinaten
-- `Angreifen(String)` - mit Ziel
-- `Heilen`
-- `Warten`
-
-Schreibe eine Funktion, die die Aktion ausführt (simuliert durch Ausgaben).
-
-### Aufgabe 6: Wettervorhersage
-
-Erstelle einen Enum `Wetter` mit:
-- `Sonnig(u32)` - mit Temperatur
-- `Regnerisch`
-- `Schnee`
-- `Bewoelkt`
-
-Schreibe Code, der passende Kleidungs-Empfehlungen gibt.
-
-## Wichtige Hinweise
-
-1. **Enum-Namen groß**: `Spielzustand`, nicht `spielzustand`
-2. **Varianten groß**: `Gewonnen`, nicht `gewonnen`
-3. **Match vollständig**: Behandle alle Varianten oder verwende `_` für "Rest"
-4. **Daten extrahieren**: In `match` kannst du Werte aus Varianten holen
-5. **Option und Result**: Diese Enums sind in Rust allgegenwärtig!
-
-## Der Unterschied: Struct vs Enum
-
-**Struct** (UND):
-```rust
-struct Person {
-    name: String,    // UND
-    alter: u32,      // UND
-    stadt: String,   // UND
-}
-```
-→ Hat alle Felder gleichzeitig
-
-**Enum** (ODER):
-```rust
-enum Zustand {
-    Laedt,           // ODER
-    Bereit,          // ODER
-    Fehler,          // ODER
-}
-```
-→ Ist genau eine Variante
-
-## Was kommt als Nächstes?
-
-Du hast jetzt die Grundlagen für komplexe Datenstrukturen gelernt! Im nächsten Kapitel geht es darum, wie du **Benutzereingaben** verarbeitest – ein wichtiger Schritt für interaktive Programme wie unser Hangman-Spiel!
+Du hast jetzt wichtige Grundlagen: Text, Listen, Structs und Enums. Im nächsten Kapitel lernst du, wie der Benutzer selbst Eingaben machen kann!
