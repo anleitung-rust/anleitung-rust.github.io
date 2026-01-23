@@ -45,13 +45,17 @@ use turtle_lib::*;
 
 #[turtle_main]
 fn main() {
-    let farben = vec![RED, GREEN, BLUE];
+    turtle.set_pen_color(RED);
+    turtle.forward(50.0);
+    turtle.right(120.0);
     
-    for farbe in &farben {
-        turtle.set_pen_color(*farbe);
-        turtle.forward(50.0);
-        turtle.right(120.0);
-    }
+    turtle.set_pen_color(GREEN);
+    turtle.forward(50.0);
+    turtle.right(120.0);
+    
+    turtle.set_pen_color(BLUE);
+    turtle.forward(50.0);
+    turtle.right(120.0);
 }
 ```
 
@@ -94,9 +98,9 @@ fn main() {
     let groessen = vec![30.0, 50.0, 70.0];
     
     for groesse in &groessen {
-        // Zeichne ein Quadrat mit dieser Größe
+        // Zeichne ein Quadrat
         for _ in 0..4 {
-            turtle.forward(*groesse);
+            turtle.forward(*groesse);  // Das * holt den Wert
             turtle.right(90.0);
         }
         // Bewege dich nach rechts

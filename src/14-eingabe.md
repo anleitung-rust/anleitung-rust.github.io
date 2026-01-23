@@ -49,7 +49,7 @@ fn main() {
         .show()
     {
         Ok(Some(text)) => {
-            let zahl: i32 = text.parse().unwrap();
+            let zahl: i32 = text.parse().unwrap();  // unwrap: "Das muss eine Zahl sein!"
             println!("Deine Zahl mal 2 ist: {}", zahl * 2);
         }
         _ => {}
@@ -58,7 +58,7 @@ fn main() {
 ```
 
 Mit `.parse()` wird der Text in eine Zahl umgewandelt.  
-Mit `.unwrap()` sagen wir "Das muss klappen!".
+Mit `.unwrap()` sagen wir "Das muss klappen!" - wenn der Text keine Zahl ist, stoppt das Programm.
 
 ## Übung: Dein Alter
 
