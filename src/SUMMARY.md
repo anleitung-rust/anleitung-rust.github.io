@@ -30,3 +30,11 @@
 - [Sammlungen: Listen von Dingen](./11-sammlungen.md)
 - [Strukturen (Structs)](./12-structs.md)
 - [Enums und Zustände](./13-enums.md)
+
+# Benutzereingabe
+
+- [Eingabe vom Benutzer](./14-eingabe.md)
+
+# Der Spielablauf
+
+- [Spielschleifen und Zustandsmaschinen](./15-spielschleife.md)
