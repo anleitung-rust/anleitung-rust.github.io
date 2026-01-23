@@ -44,8 +44,10 @@ Schreibe ein Programm, das:
 <summary>Lösung</summary>
 
 ```rust
+use turtle_lib::turtle_main;
 use dialog::DialogBox;
 
+#[turtle_main]
 fn main() {
     // Frage nach Name
     let name = match dialog::Input::new("Wie heißt du?")
@@ -68,7 +70,7 @@ fn main() {
     let alter: u32 = alter_text.parse().unwrap();
     
     // Zeige Ergebnis
-    println!("Hallo {}, du bist {} Jahre alt!", name, alter);
+    turtle.write_text(&format!("Hallo {}, du bist {} Jahre alt!", name, alter), 50.0);
 }
 ```
 </details>
@@ -100,10 +102,10 @@ fn main() {
         .show()
     {
         Ok(dialog::Choice::Yes) => {
-            println!("Los geht's!");
+            turtle.write_text("Los geht's!", 50.0);
         }
         _ => {
-            println!("Okay, tschüss!");
+            turtle.write_text("Okay, tschüss!", 50.0);
         }
     }
 }

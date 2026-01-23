@@ -28,9 +28,9 @@ Mit `match` kannst du auf verschiedene Werte reagieren:
 
 ```rust
 match farbe {
-    Ampel::Rot => println!("Stopp!"),
-    Ampel::Gelb => println!("Achtung!"),
-    Ampel::Gruen => println!("Fahr!"),
+    Ampel::Rot => turtle.write_text("Stopp!", 50.0),
+    Ampel::Gelb => turtle.write_text("Achtung!", 50.0),
+    Ampel::Gruen => turtle.write_text("Fahr!", 50.0),
 }
 ```
 
