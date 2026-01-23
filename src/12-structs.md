@@ -50,28 +50,7 @@ Mit dem Punkt `.` greifst du auf die Felder zu.
 Probier dieses Beispiel aus:
 
 ```rust
-use turtle_lib::*;
-
-struct Rechteck {
-    breite: f32,
-    hoehe: f32,
-}
-
-#[turtle_main]
-fn main() {
-    let rechteck = Rechteck {
-        breite: 100.0,
-        hoehe: 60.0,
-    };
-    
-    // Zeichne das Rechteck
-    for _ in 0..2 {
-        turtle.forward(rechteck.breite);
-        turtle.right(90.0);
-        turtle.forward(rechteck.hoehe);
-        turtle.right(90.0);
-    }
-}
+{{#include ../codesamples/examples/struct_rechteck.rs}}
 ```
 
 Ändere die Breite und Höhe und schau, was passiert!
@@ -96,36 +75,7 @@ Erstelle ein Programm, das:
 <summary>Lösung (nur anschauen, wenn du nicht weiterkommst!)</summary>
 
 ```rust
-use turtle_lib::*;
-
-struct Rechteck {
-    breite: f32,
-    hoehe: f32,
-}
-
-#[turtle_main]
-fn main() {
-    let rechtecke = vec![
-        Rechteck { breite: 50.0, hoehe: 30.0 },
-        Rechteck { breite: 70.0, hoehe: 40.0 },
-        Rechteck { breite: 90.0, hoehe: 50.0 },
-    ];
-    
-    for rechteck in &rechtecke {
-        // Zeichne Rechteck
-        for _ in 0..2 {
-            turtle.forward(rechteck.breite);
-            turtle.right(90.0);
-            turtle.forward(rechteck.hoehe);
-            turtle.right(90.0);
-        }
-        
-        // Bewege nach rechts
-        turtle.pen_up();
-        turtle.forward(rechteck.breite + 20.0);
-        turtle.pen_down();
-    }
-}
+{{#include ../codesamples/examples/struct_drei_rechtecke.rs}}
 ```
 </details>
 

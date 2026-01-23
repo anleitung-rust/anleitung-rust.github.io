@@ -13,21 +13,7 @@ Eine **Dialogbox** ist ein kleines Fenster, das eine Frage stellt. Du kennst das
 So fragst du nach einem Namen:
 
 ```rust
-use dialog::DialogBox;
-
-fn main() {
-    match dialog::Input::new("Wie heißt du?")
-        .title("Name")
-        .show()
-    {
-        Ok(Some(name)) => {
-            println!("Hallo, {}!", name);
-        }
-        _ => {
-            println!("Keine Eingabe.");
-        }
-    }
-}
+{{#include ../codesamples/examples/eingabe_name.rs:main}}
 ```
 
 **Was passiert?**
@@ -41,20 +27,7 @@ fn main() {
 Oft möchtest du eine Zahl haben:
 
 ```rust
-use dialog::DialogBox;
-
-fn main() {
-    match dialog::Input::new("Gib eine Zahl ein:")
-        .title("Zahl")
-        .show()
-    {
-        Ok(Some(text)) => {
-            let zahl: i32 = text.parse().unwrap();  // unwrap: "Das muss eine Zahl sein!"
-            println!("Deine Zahl mal 2 ist: {}", zahl * 2);
-        }
-        _ => {}
-    }
-}
+{{#include ../codesamples/examples/eingabe_zahl.rs}}
 ```
 
 Mit `.parse()` wird der Text in eine Zahl umgewandelt.  

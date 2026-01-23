@@ -18,15 +18,7 @@ Text steht immer in Anführungszeichen `"..."`.
 Probier das aus:
 
 ```rust
-use turtle_lib::*;
-
-#[turtle_main]
-fn main() {
-    let name = "Max";
-    println!("Hallo, {}!", name);
-    
-    turtle.forward(100.0);
-}
+{{#include ../codesamples/examples/strings_turtle.rs:main}}
 ```
 
 Das `{}` ist ein Platzhalter für den Text aus der Variable `name`.

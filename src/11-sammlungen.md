@@ -41,22 +41,7 @@ println!("{}", tiere[2]);  // Gibt aus: Vogel
 Probier dieses Programm aus:
 
 ```rust
-use turtle_lib::*;
-
-#[turtle_main]
-fn main() {
-    turtle.set_pen_color(RED);
-    turtle.forward(50.0);
-    turtle.right(120.0);
-    
-    turtle.set_pen_color(GREEN);
-    turtle.forward(50.0);
-    turtle.right(120.0);
-    
-    turtle.set_pen_color(BLUE);
-    turtle.forward(50.0);
-    turtle.right(120.0);
-}
+{{#include ../codesamples/examples/vektor_turtle_farben.rs:main}}
 ```
 
 Was zeichnet das Programm? Ändere die Farben und probiere es aus!
@@ -91,24 +76,7 @@ Erstelle ein Programm, das:
 <summary>Tipp</summary>
 
 ```rust
-use turtle_lib::*;
-
-#[turtle_main]
-fn main() {
-    let groessen = vec![30.0, 50.0, 70.0];
-    
-    for groesse in &groessen {
-        // Zeichne ein Quadrat
-        for _ in 0..4 {
-            turtle.forward(*groesse);  // Das * holt den Wert
-            turtle.right(90.0);
-        }
-        // Bewege dich nach rechts
-        turtle.pen_up();
-        turtle.forward(groesse + 20.0);
-        turtle.pen_down();
-    }
-}
+{{#include ../codesamples/examples/vektor_quadrate.rs:main}}
 ```
 </details>
 

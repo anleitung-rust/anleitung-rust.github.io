@@ -18,12 +18,7 @@ Wir bauen ein Spiel, bei dem der Computer sich eine Zahl zwischen 0 und 100 ausd
 Zuerst brauchen wir eine Zufallszahl:
 
 ```rust
-use macroquad::rand::gen_range;
-
-fn main() {
-    let geheime_zahl = gen_range(0, 101);  // 0 bis 100
-    println!("Ich habe mir eine Zahl ausgedacht!");
-}
+{{#include ../codesamples/examples/ratespiel_schritte.rs:step1}}
 ```
 
 ### Schritt 2: Nach einer Zahl fragen
@@ -31,22 +26,7 @@ fn main() {
 Jetzt fragen wir den Spieler:
 
 ```rust
-use dialog::DialogBox;
-use macroquad::rand::gen_range;
-
-fn main() {
-    let geheime_zahl = gen_range(0, 101);
-    
-    let eingabe = dialog::Input::new("Rate die Zahl (0-100):")
-        .title("Ratespiel")
-        .show()
-        .unwrap()
-        .unwrap();
-    
-    let tipp: i32 = eingabe.parse().unwrap();
-    
-    println!("Du hast {} geraten", tipp);
-}
+{{#include ../codesamples/examples/ratespiel_schritte.rs:step2}}
 ```
 
 ### Schritt 3: Prüfen, ob richtig
@@ -54,13 +34,7 @@ fn main() {
 Jetzt vergleichen wir:
 
 ```rust
-if tipp == geheime_zahl {
-    println!("Richtig!");
-} else if tipp < geheime_zahl {
-    println!("Zu klein!");
-} else {
-    println!("Zu groß!");
-}
+{{#include ../codesamples/examples/ratespiel_schritte.rs:step3}}
 ```
 
 ### Schritt 4: Die Schleife
@@ -68,39 +42,7 @@ if tipp == geheime_zahl {
 Damit man mehrmals raten kann, packen wir alles in eine Schleife:
 
 ```rust
-use dialog::DialogBox;
-use macroquad::rand::gen_range;
-
-fn main() {
-    let geheime_zahl = gen_range(0, 101);
-    
-    loop {
-        let eingabe = dialog::Input::new("Rate die Zahl (0-100):")
-            .title("Ratespiel")
-            .show()
-            .unwrap()
-            .unwrap();
-        
-        let tipp: i32 = eingabe.parse().unwrap();
-        
-        if tipp == geheime_zahl {
-            let _ = dialog::Message::new(&format!("Richtig! Die Zahl war {}!", geheime_zahl))
-                .title("Gewonnen!")
-                .show();
-            break;  // Schleife verlassen
-        } else if tipp < geheime_zahl {
-            let _ = dialog::Message::new("Zu klein! Versuche eine größere Zahl.")
-                .title("Hinweis")
-                .show();
-        } else {
-            let _ = dialog::Message::new("Zu groß! Versuche eine kleinere Zahl.")
-                .title("Hinweis")
-                .show();
-        }
-    }
-    
-    println!("Spiel beendet!");
-}
+{{#include ../codesamples/examples/ratespiel_einfach.rs}}
 ```
 
 **Das komplette Spiel!** Probier es aus:

@@ -39,28 +39,7 @@ match farbe {
 Probier dieses Beispiel:
 
 ```rust
-use turtle_lib::*;
-
-enum Richtung {
-    Oben,
-    Rechts,
-    Unten,
-    Links,
-}
-
-#[turtle_main]
-fn main() {
-    let richtung = Richtung::Rechts;
-    
-    match richtung {
-        Richtung::Oben => turtle.right(0.0),
-        Richtung::Rechts => turtle.right(90.0),
-        Richtung::Unten => turtle.right(180.0),
-        Richtung::Links => turtle.right(270.0),
-    }
-    
-    turtle.forward(100.0);
-}
+{{#include ../codesamples/examples/enum_richtung.rs}}
 ```
 
 Ändere die Richtung und schau, was passiert!
@@ -95,30 +74,7 @@ Erstelle ein Programm, das:
 <summary>Tipp</summary>
 
 ```rust
-use turtle_lib::*;
-
-enum Farbe {
-    Rot,
-    Gruen,
-    Blau,
-}
-
-#[turtle_main]
-fn main() {
-    let farbe = Farbe::Gruen;  // Ändere das!
-    
-    match farbe {
-        Farbe::Rot => turtle.set_pen_color(RED),
-        Farbe::Gruen => turtle.set_pen_color(GREEN),
-        Farbe::Blau => turtle.set_pen_color(BLUE),
-    }
-    
-    // Zeichne Quadrat
-    for _ in 0..4 {
-        turtle.forward(80.0);
-        turtle.right(90.0);
-    }
-}
+{{#include ../codesamples/examples/enum_farbe.rs}}
 ```
 </details>
 
