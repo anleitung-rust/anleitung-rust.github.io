@@ -2,6 +2,8 @@
 
 Eine deutschsprachige Einführung in das Programmieren für Schülerinnen und Schüler, basierend auf der Programmiersprache Rust und der Turtle-Grafik-Bibliothek.
 
+Die Anleitung ist veröffentlicht unter: https://anleitung-rust.github.io/
+
 ## Überblick
 
 Diese Anleitung wurde entwickelt, um Programmier-Anfängern einen einfachen und motivierenden Einstieg in die Welt des Programmierens zu bieten. Durch die Verwendung von Turtle-Grafik können Lernende sofort visuelle Ergebnisse ihrer Programme sehen, was das Verständnis erleichtert und Spaß macht.
