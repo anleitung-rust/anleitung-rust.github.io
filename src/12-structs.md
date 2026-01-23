@@ -127,27 +127,6 @@ Du kannst Vektoren von Structs erstellen:
 
 Das ist perfekt für Listen von Spielern, Gegnern, oder anderen Objekten!
 
-## Konstruktor-Funktionen
-
-Oft ist es praktisch, eine Funktion zu haben, die einen Struct erstellt:
-
-```rust
-impl Spieler {
-    fn neu(name: String) -> Spieler {
-        Spieler {
-            name,
-            punkte: 0,
-            leben: 3,
-        }
-    }
-}
-
-// Verwendung:
-let spieler = Spieler::neu("Anna".to_string());
-```
-
-Das nennt man einen **Konstruktor** (englisch "constructor").
-
 ## Der Unterschied zu Variablen
 
 **Variable**:

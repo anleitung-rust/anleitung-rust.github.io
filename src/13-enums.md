@@ -95,62 +95,6 @@ Für Hangman können wir das Spielergebnis mit einem Enum modellieren:
 
 Mit `match` entscheiden wir, was zu tun ist – je nach Spielzustand!
 
-## Option: Ein spezieller Enum
-
-Rust hat einen eingebauten Enum `Option`, der sehr häufig verwendet wird:
-
-```rust
-enum Option<T> {
-    Some(T),    // Es gibt einen Wert
-    None,       // Es gibt keinen Wert
-}
-```
-
-Das ist nützlich, wenn etwas da sein kann – oder eben nicht:
-
-```rust
-{{#include ../codesamples/examples/enum_option.rs}}
-```
-
-Mit `Option` vermeidest du Fehler durch fehlende Werte!
-
-## Result: Erfolg oder Fehler
-
-Ein anderer wichtiger Enum ist `Result`:
-
-```rust
-enum Result<T, E> {
-    Ok(T),      // Erfolg mit Wert
-    Err(E),     // Fehler
-}
-```
-
-Das verwendest du, wenn etwas schiefgehen kann:
-
-```rust
-{{#include ../codesamples/examples/enum_result.rs}}
-```
-
-## Match mit Mustern
-
-Du kannst in `match` auch Daten extrahieren:
-
-```rust
-{{#include ../codesamples/examples/enum_match_muster.rs}}
-```
-
-Mit `nachricht` extrahieren wir den Text aus der `Nachricht`-Variante!
-
-## If let: Eine einfache Alternative
-
-Wenn du nur eine Variante prüfen willst, ist `if let` kürzer als `match`:
-
-```rust
-{{#include ../codesamples/examples/enum_if_let.rs}}
-```
-
-`if let` ist wie ein `match`, der nur einen Fall behandelt.
-
 ## Enums in Structs
 
 Du kannst Enums in Structs verwenden:
@@ -160,23 +104,6 @@ Du kannst Enums in Structs verwenden:
 ```
 
 So kombinierst du die Stärken von Structs und Enums!
-
-## While let: Schleifen mit Pattern Matching
-
-Du kannst `while let` für Schleifen verwenden:
-
-```rust
-let mut option = Some(5);
-
-while let Some(wert) = option {
-    println!("Wert: {}", wert);
-    if wert > 0 {
-        option = Some(wert - 1);
-    } else {
-        option = None;
-    }
-}
-```
 
 ## Enum-Methoden
 
@@ -193,9 +120,6 @@ Du hast gelernt:
 - `Name::Variante` - Wählt eine Variante
 - `match wert { Variante => ... }` - Entscheidet basierend auf Variante
 - Enums können Daten enthalten
-- `Option<T>` - Für optionale Werte (Some/None)
-- `Result<T, E>` - Für Operationen, die fehlschlagen können (Ok/Err)
-- `if let` - Kurzform für einfache Matches
 - Enums modellieren "entweder-oder"-Situationen
 
 ## Übungsaufgaben

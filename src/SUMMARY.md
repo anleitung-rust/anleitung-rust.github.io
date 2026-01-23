@@ -27,6 +27,6 @@
 # Mehr über Daten
 
 - [Strings und Text](./10-strings.md)
-- [Sammlungen: Vektoren und Arrays](./11-sammlungen.md)
+- [Sammlungen: Listen von Dingen](./11-sammlungen.md)
 - [Strukturen (Structs)](./12-structs.md)
 - [Enums und Zustände](./13-enums.md)

@@ -1,4 +1,4 @@
-# Sammlungen: Vektoren und Arrays
+# Sammlungen: Listen von Dingen (Vektoren)
 
 Im letzten Kapitel hast du gelernt, wie man mit einzelnen Texten arbeitet. Aber was, wenn du mehrere Wörter, viele Zahlen oder eine ganze Liste von Werten speichern möchtest? Hier kommen **Sammlungen** ins Spiel! Sie sind wie Schubladen mit mehreren Fächern, in denen du viele Werte gleichzeitig aufbewahren kannst.
 
@@ -9,9 +9,7 @@ Eine **Liste** (oder Sammlung) ist eine geordnete Folge von Werten. Stell dir vo
 - Jedes Fach enthält einen Wert
 - Du kannst auf jedes Fach über seine Nummer zugreifen
 
-In Rust gibt es zwei wichtige Arten von Listen:
-1. **Vec** (Vektor) - Eine Liste, die wachsen und schrumpfen kann
-2. **Array** - Eine Liste mit fester Größe
+In Rust verwenden wir dafür **Vektoren (Vec)** - flexible Listen, die wachsen und schrumpfen können.
 
 ## Was ist ein Vektor (Vec)?
 
@@ -109,42 +107,6 @@ Für ein Hangman-Spiel brauchen wir eine Liste von Wörtern, aus der wir zufäll
 
 Das ist perfekt für ein Ratespiel! Bei jedem Start wird ein neues, zufälliges Wort gewählt.
 
-## Arrays: Listen mit fester Größe
-
-Ein **Array** ist eine Liste mit fester Größe. Die Anzahl der Elemente steht von Anfang an fest und kann nicht geändert werden.
-
-```rust
-{{#include ../codesamples/examples/array_beispiel.rs}}
-```
-
-Arrays sind schneller als Vektoren, aber weniger flexibel.
-
-## Vec vs Array: Was ist der Unterschied?
-
-**Vektor (Vec)**:
-- ✅ Kann wachsen und schrumpfen
-- ✅ Flexibel
-- ❌ Etwas langsamer
-- Verwendung: Wenn du nicht weißt, wie viele Elemente du brauchst
-
-**Array**:
-- ✅ Feste Größe
-- ✅ Etwas schneller
-- ❌ Kann nicht wachsen
-- Verwendung: Wenn die Anzahl von Anfang an feststeht
-
-**Faustregel:** Wenn du dir unsicher bist, verwende einen Vektor!
-
-## Mehrdimensionale Listen
-
-Du kannst auch Listen in Listen speichern:
-
-```rust
-{{#include ../codesamples/examples/vektor_2d.rs}}
-```
-
-Das ist nützlich für Raster, Spielfelder oder Tabellen.
-
 ## Wichtige Methoden für Vektoren
 
 Hier sind die wichtigsten Operationen auf einen Blick:
@@ -168,8 +130,7 @@ Du hast gelernt:
 - `.push(wert)` - Fügt ein Element hinzu
 - `for element in &vektor { }` - Durchläuft alle Elemente
 - `.len()` - Gibt die Anzahl der Elemente zurück
-- Arrays `[1, 2, 3]` - Listen mit fester Größe
-- Vektoren sind flexibler, Arrays sind schneller
+- Vektoren sind flexible und dynamische Sammlungen
 
 ## Übungsaufgaben
 
@@ -225,5 +186,6 @@ Erstelle eine Einkaufsliste als Vektor mit mindestens 5 Produkten. Gib die Liste
 2. **mut bei Vektoren**: Wenn du Elemente hinzufügen willst, brauchst du `mut`
 3. **Typen sind einheitlich**: Alle Elemente müssen den gleichen Typ haben
 4. **Grenzen beachten**: `vektor[10]` stürzt ab, wenn der Vektor nur 5 Elemente hat!
+5. **Vektoren sind die beste Wahl**: Für die meisten Fälle solltest du Vektoren verwenden
 
 Im nächsten Kapitel lernst du **Strukturen (Structs)** kennen – damit kannst du eigene, komplexere Datentypen erstellen. Das ist wichtig, um den Zustand eines Spiels zu organisieren!
