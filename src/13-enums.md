@@ -58,9 +58,9 @@ enum Spielstand {
 let zustand = Spielstand::Laeuft;
 
 match zustand {
-    Spielstand::Laeuft => println!("Spiel läuft noch..."),
-    Spielstand::Gewonnen => println!("Du hast gewonnen! 🎉"),
-    Spielstand::Verloren => println!("Verloren 💀"),
+    Spielstand::Laeuft => turtle.write_text("Spiel läuft noch...", 50.0),
+    Spielstand::Gewonnen => turtle.write_text("Du hast gewonnen! 🎉", 50.0),
+    Spielstand::Verloren => turtle.write_text("Verloren 💀", 50.0),
 }
 ```
 

@@ -31,9 +31,9 @@ Jedes Element in der Liste hat eine Nummer (Index). Die Zählung beginnt bei 0!
 ```rust
 let tiere = vec!["Hund", "Katze", "Vogel"];
 
-println!("{}", tiere[0]);  // Gibt aus: Hund
-println!("{}", tiere[1]);  // Gibt aus: Katze
-println!("{}", tiere[2]);  // Gibt aus: Vogel
+turtle.write_text(tiere[0], 50.0);  // Gibt aus: Hund
+turtle.write_text(tiere[1], 50.0);  // Gibt aus: Katze
+turtle.write_text(tiere[2], 50.0);  // Gibt aus: Vogel
 ```
 
 ## Übung: Turtle mit Farben
@@ -41,7 +41,7 @@ println!("{}", tiere[2]);  // Gibt aus: Vogel
 Probier dieses Programm aus:
 
 ```rust
-{{#include ../codesamples/examples/vektor_turtle_farben.rs:main}}
+{{#include ../codesamples/examples/vektor_turtle_farben.rs}}
 ```
 
 Was zeichnet das Programm? Ändere die Farben und probiere es aus!
@@ -54,7 +54,7 @@ Mit einer `for`-Schleife kannst du alle Elemente durchgehen:
 let zahlen = vec![5, 10, 15];
 
 for zahl in &zahlen {
-    println!("{}", zahl);
+    turtle.write_text(&zahl.to_string(), 50.0);
 }
 ```
 

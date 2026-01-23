@@ -35,7 +35,7 @@ Du kannst Text kombinieren:
 let vorname = "Anna";
 let nachname = "Müller";
 let ganzer_name = format!("{} {}", vorname, nachname);
-println!("{}", ganzer_name);  // Gibt aus: Anna Müller
+turtle.write_text(ganzer_name, 50.0);  // Gibt aus: Anna Müller
 ```
 
 ## Text vergleichen
@@ -47,7 +47,7 @@ let wort1 = "Katze";
 let wort2 = "Katze";
 
 if wort1 == wort2 {
-    println!("Die Wörter sind gleich!");
+    turtle.write_text("Die Wörter sind gleich!", 50.0);
 }
 ```
 
@@ -57,26 +57,14 @@ if wort1 == wort2 {
 
 Erstelle ein Programm, das:
 1. Deinen Namen in einer Variable speichert
-2. "Hallo, [dein Name]!" ausgibt
-3. Ein Quadrat mit der Turtle zeichnet
+2. "Hallo, [dein Name]!" schreibt
+3. Ein Quadrat mit der Turtle und dabei auf jeder Seite "Hallo, [dein Name]!" schreibt.
 
 <details>
 <summary>Tipp</summary>
 
 ```rust
-use turtle_lib::*;
-
-#[turtle_main]
-fn main() {
-    let name = "...";  // Dein Name hier
-    println!("Hallo, {}!", name);
-    
-    // Zeichne ein Quadrat
-    for _ in 0..4 {
-        turtle.forward(80.0);
-        turtle.right(90.0);
-    }
-}
+{{#include ../codesamples/examples/strings_square.rs:main}}
 ```
 </details>
 

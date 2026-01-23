@@ -39,8 +39,8 @@ let person = Person {
     alter: 12,
 };
 
-println!("Name: {}", person.name);
-println!("Alter: {}", person.alter);
+turtle.write_text(&format!("Name: {}", person.name), 50.0);
+turtle.write_text(&format!("Alter: {}", person.alter), 50.0);
 ```
 
 Mit dem Punkt `.` greifst du auf die Felder zu.

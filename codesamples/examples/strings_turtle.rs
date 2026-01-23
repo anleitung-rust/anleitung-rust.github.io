@@ -9,7 +9,7 @@ fn main() {
     // ANCHOR: main
     let name = "Max";
     println!("Hallo, {}!", name);
-    
-    turtle.forward(100.0);
+
+    turtle.write_text(name, 50.0);
     // ANCHOR_END: main
 }
