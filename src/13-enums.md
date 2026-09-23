@@ -39,7 +39,7 @@ match farbe {
 Probier dieses Beispiel:
 
 ```rust
-{{#include ../codesamples/examples/enum_richtung.rs}}
+{{#include ../codesamples/examples/enum_richtung.rs:main}}
 ```
 
 Ändere die Richtung und schau, was passiert!
@@ -74,7 +74,7 @@ Erstelle ein Programm, das:
 <summary>Tipp</summary>
 
 ```rust
-{{#include ../codesamples/examples/enum_farbe.rs}}
+{{#include ../codesamples/examples/enum_farbe.rs:main}}
 ```
 </details>
 

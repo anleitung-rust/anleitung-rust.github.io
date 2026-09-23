@@ -38,3 +38,7 @@
 # Der Spielablauf
 
 - [Spielschleifen und Zustandsmaschinen](./15-spielschleife.md)
+
+# Anhang
+
+- [VS Code installieren (optional)](./99-vscode-appendix.md)

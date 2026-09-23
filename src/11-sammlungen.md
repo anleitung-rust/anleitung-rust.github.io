@@ -41,7 +41,7 @@ turtle.write_text(tiere[2], 50.0);  // Gibt aus: Vogel
 Probier dieses Programm aus:
 
 ```rust
-{{#include ../codesamples/examples/vektor_turtle_farben.rs}}
+{{#include ../codesamples/examples/vektor_turtle_farben.rs:main}}
 ```
 
 Was zeichnet das Programm? Ändere die Farben und probiere es aus!

@@ -50,7 +50,7 @@ Mit dem Punkt `.` greifst du auf die Felder zu.
 Probier dieses Beispiel aus:
 
 ```rust
-{{#include ../codesamples/examples/struct_rechteck.rs}}
+{{#include ../codesamples/examples/struct_rechteck.rs:main}}
 ```
 
 Ändere die Breite und Höhe und schau, was passiert!
@@ -75,7 +75,7 @@ Erstelle ein Programm, das:
 <summary>Lösung (nur anschauen, wenn du nicht weiterkommst!)</summary>
 
 ```rust
-{{#include ../codesamples/examples/struct_drei_rechtecke.rs}}
+{{#include ../codesamples/examples/struct_drei_rechtecke.rs:main}}
 ```
 </details>
 

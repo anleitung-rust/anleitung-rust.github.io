@@ -3,7 +3,7 @@
 //! Dieses Programm fragt nach einer Zahl und wandelt sie um.
 
 use dialog::DialogBox;
-use turtle_lib::turtle_main;
+use turtle_lib::*;
 
 #[turtle_main]
 fn main() {
