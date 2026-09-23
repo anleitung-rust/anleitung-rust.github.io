@@ -1,0 +1,18 @@
+<svg viewBox="-30.000015 -30 260 260" xmlns="http://www.w3.org/2000/svg">
+<text fill="rgb(0,0,0)" font-size="30" transform="rotate(0, -0.0000004371139, -10)" x="-0.0000004371139" y="-10">
+Hallo, ...!
+</text>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="0" x2="200" y1="0" y2="0"/>
+<text fill="rgb(0,0,0)" font-size="30" transform="rotate(90, 210, 0)" x="210" y="0">
+Hallo, ...!
+</text>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="200" x2="199.99998" y1="0" y2="200"/>
+<text fill="rgb(0,0,0)" font-size="30" transform="rotate(180, 199.99998, 210)" x="199.99998" y="210">
+Hallo, ...!
+</text>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="199.99998" x2="-0.000015258789" y1="200" y2="199.99998"/>
+<text fill="rgb(0,0,0)" font-size="30" transform="rotate(-90.00001, -10.000015, 199.99998)" x="-10.000015" y="199.99998">
+Hallo, ...!
+</text>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="-0.000015258789" x2="-0.000047842925" y1="199.99998" y2="-0.000015258789"/>
+</svg>

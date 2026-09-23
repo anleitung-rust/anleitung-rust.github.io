@@ -53,7 +53,7 @@ Jedes Rust-Programm hat eine `main`-Funktion (englisch für "Haupt"). Das ist de
 
 Das `#[turtle_main]` darüber ist eine spezielle Anweisung, die das Fenster für die Schildkröte vorbereitet.
 
-**Tipp:** Über der Zeile `fn main()` siehst du in VS Code einen **Run**-Button. Damit kannst du das Programm starten!
+**Tipp:** Über der Zeile `fn main()` siehst du in Zed einen **Run**-Button. Damit kannst du das Programm starten!
 
 ### 3. Die Stiftfarbe setzen
 
@@ -99,7 +99,7 @@ So startest du dein Programm:
    - Ein Fenster öffnet sich und zeigt deine Zeichnung!
 
 2. **Terminal verwenden**:
-   - Öffne das Terminal in VS Code
+   - Öffne das Terminal in Zed
    - Tippe `cargo run` und drücke Enter
 
 ## Was siehst du?

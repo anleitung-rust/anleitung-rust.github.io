@@ -1,0 +1,6 @@
+<svg viewBox="-20.00001 -20.000008 140 100.00001" xmlns="http://www.w3.org/2000/svg">
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="0" x2="100" y1="0" y2="0"/>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="100" x2="100" y1="0" y2="60"/>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="100" x2="0" y1="60" y2="59.999992"/>
+<line stroke="rgb(0,0,0)" stroke-linecap="round" stroke-width="2" x1="0" x2="-0.000009775241" y1="59.999992" y2="-0.0000076293945"/>
+</svg>

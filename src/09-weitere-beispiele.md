@@ -95,12 +95,15 @@ Herzlichen Glückwunsch! Du hast die Grundlagen des Programmierens gelernt:
 
 ## Wie geht es weiter?
 
-Du hast jetzt eine solide Grundlage für das Programmieren! Hier sind einige Ideen, wie du weitermachen kannst:
+Du hast jetzt eine solide Grundlage für das Programmieren! Mit Bewegung, Schleifen, Farben, Variablen und Funktionen kannst du schon viele tolle Zeichnungen erstellen.
 
-1. **Mehr üben**: Je mehr du programmierst, desto besser wirst du
-2. **Eigene Projekte**: Überlege dir eigene Zeichnungen und setze sie um
-3. **Rust lernen**: Die Turtle-Grafik ist nur der Anfang – Rust kann noch viel mehr!
-4. **Teilen**: Zeige deine Zeichnungen anderen und lass dich inspirieren
+Aber Rust kann noch viel mehr! In den nächsten Kapiteln lernst du:
+- **Strings**: Wie man mit Text arbeitet
+- **Sammlungen**: Listen von Werten verwalten
+- **Structs**: Eigene Datentypen erstellen
+- **Enums**: Verschiedene Zustände modellieren
+
+Diese Konzepte sind wichtig, um richtige Programme zu schreiben – zum Beispiel ein Hangman-Spiel!
 
 ## Wichtige Tipps für Anfänger
 
