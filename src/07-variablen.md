@@ -28,7 +28,7 @@ Variablen haben mehrere Vorteile:
 ## Beispiel: Quadrat mit Variable
 
 ```rust
-{{#include ../codesamples/examples/variablen.rs}}
+{{#include ../codesamples/examples/variablen.rs:main}}
 ```
 
 ![Ergebnis: Ein grünes Quadrat mit der Seitenlänge aus der Variable](screenshots/variablen.svg)
@@ -40,7 +40,7 @@ Hier verwenden wir eine Variable `seitenlaenge` für die Größe des Quadrats. W
 Du kannst so viele Variablen verwenden, wie du möchtest:
 
 ```rust
-{{#include ../codesamples/examples/mehrere_variablen.rs}}
+{{#include ../codesamples/examples/mehrere_variablen.rs:main}}
 ```
 
 ![Ergebnis: Ein rosa Achteck mit Variablen für Seiten und Winkel](screenshots/mehrere_variablen.svg)
@@ -77,7 +77,7 @@ laenge = laenge + 3.0;  // Jetzt ist laenge 8.0
 ## Beispiel: Spirale mit sich ändernder Variable
 
 ```rust
-{{#include ../codesamples/examples/spirale.rs}}
+{{#include ../codesamples/examples/spirale.rs:main}}
 ```
 
 ![Ergebnis: Eine lila Spirale mit zunehmender Linienlänge](screenshots/spirale.svg)
@@ -96,6 +96,14 @@ let differenz = a - b;    // 5.0 (Subtraktion)
 let produkt = a * b;      // 50.0 (Multiplikation)
 let quotient = a / b;     // 2.0 (Division)
 ```
+
+Ein praktisches Beispiel ist ein Vieleck, bei dem der Drehwinkel mit einer Berechnung entsteht:
+
+```rust
+{{#include ../codesamples/examples/variablen_rechnung.rs:main}}
+```
+
+Hier berechnen wir den Winkel mit `360.0 / anzahl_seiten as f64`. Wenn du die Anzahl der Seiten änderst, passt der Winkel automatisch mit!
 
 ## Zahlentypen
 

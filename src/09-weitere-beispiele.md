@@ -2,22 +2,6 @@
 
 Du hast in den letzten Kapiteln viel gelernt: Bewegung, Schleifen, Farben, Variablen und Funktionen. Jetzt ist es Zeit, alles zusammenzubringen! In diesem Kapitel schauen wir uns einige kreative Beispiele an, die zeigen, was du mit der Turtle-Grafik alles machen kannst.
 
-## Die Spirale
-
-Eine Spirale entsteht, wenn die Schildkröte sich bewegt und dabei die Schrittlänge immer weiter erhöht:
-
-```rust
-{{#include ../codesamples/examples/spirale.rs}}
-```
-
-![Ergebnis: Eine lila Spirale](screenshots/spirale.svg)
-
-**Was passiert hier?**
-- Wir starten mit einer Länge von 5.0
-- In jeder Runde zeichnen wir eine Linie und drehen uns
-- Die Länge wird um 3.0 erhöht
-- Nach 50 Wiederholungen entsteht eine schöne Spirale
-
 ## Ideen zum Experimentieren
 
 Jetzt bist du dran! Hier sind einige Ideen, was du ausprobieren kannst:
@@ -27,6 +11,8 @@ Jetzt bist du dran! Hier sind einige Ideen, was du ausprobieren kannst:
 Versuche, ein Programm zu schreiben, das mehrere Quadrate in verschiedenen Farben zeichnet, die sich überlappen.
 
 **Tipp:** Verwende `pen_up()` und `pen_down()`, um die Schildkröte zwischen den Quadraten zu bewegen.
+
+![Ergebnis: Muster aus mehreren Quadraten in verschiedenen Farben](screenshots/muster_farben.svg)
 
 ### 2. Ein Haus zeichnen
 
@@ -38,12 +24,16 @@ Zeichne ein einfaches Haus:
 
 **Tipp:** Erstelle Funktionen für `zeichne_rechteck()` und `zeichne_dreieck()`.
 
+![Ergebnis: Das Haus vom Nikolaus in Rot](screenshots/haus_vom_nikolaus.svg)
+
 ### 3. Eine Blume
 
 Zeichne eine Blume mit mehreren Blütenblättern:
 - Jedes Blütenblatt ist ein ausgefüllter Kreis oder eine Ellipse
 - Drehe die Schildkröte nach jedem Blütenblatt
 - Verwende verschiedene Farben
+
+![Ergebnis: Eine bunte Blume mit mehreren Blütenblättern](screenshots/blume.svg)
 
 ### 4. Ein Regenbogen
 
@@ -57,9 +47,11 @@ Zeichne konzentrische Halbkreise in verschiedenen Farben:
 
 **Tipp:** Du kannst `circle_left()` oder `circle_right()` für Kreisbögen verwenden.
 
+![Ergebnis: Ein Regenbogen aus konzentrischen Halbkreisen](screenshots/regenbogen.svg)
+
 ### 5. Dein Name
 
-Versuche, die Buchstaben deines Namens mit der Schildkröte zu zeichnen!
+Versuche, die Buchstaben deines Namens mit der Schildkröte zu zeichnen! Du kannst mit einem großen Anfangsbuchstaben starten und dann immer weiter einzelne Buchstaben zu einem Wort kombinieren.
 
 ## Tipps für kreative Zeichnungen
 

@@ -1,0 +1,14 @@
+<svg viewBox="-85.00003 -85.00001 170.00003 170" xmlns="http://www.w3.org/2000/svg">
+<line stroke="rgb(229,40,56)" stroke-linecap="round" stroke-width="2" x1="-25" x2="25" y1="-25" y2="-25"/>
+<line stroke="rgb(229,40,56)" stroke-linecap="round" stroke-width="2" x1="25" x2="24.999998" y1="-25" y2="25"/>
+<line stroke="rgb(229,40,56)" stroke-linecap="round" stroke-width="2" x1="24.999998" x2="-25.000002" y1="25" y2="24.999996"/>
+<line stroke="rgb(229,40,56)" stroke-linecap="round" stroke-width="2" x1="-25.000002" x2="-25.00001" y1="24.999996" y2="-25.000004"/>
+<line stroke="rgb(0,119,242)" stroke-linecap="round" stroke-width="2" x1="-45" x2="45" y1="-45" y2="-45"/>
+<line stroke="rgb(0,119,242)" stroke-linecap="round" stroke-width="2" x1="45" x2="44.999996" y1="-45" y2="45"/>
+<line stroke="rgb(0,119,242)" stroke-linecap="round" stroke-width="2" x1="44.999996" x2="-45.000004" y1="45" y2="44.999992"/>
+<line stroke="rgb(0,119,242)" stroke-linecap="round" stroke-width="2" x1="-45.000004" x2="-45.00002" y1="44.999992" y2="-45.000008"/>
+<line stroke="rgb(0,226,48)" stroke-linecap="round" stroke-width="2" x1="-65" x2="65" y1="-65" y2="-65"/>
+<line stroke="rgb(0,226,48)" stroke-linecap="round" stroke-width="2" x1="65" x2="64.99999" y1="-65" y2="65"/>
+<line stroke="rgb(0,226,48)" stroke-linecap="round" stroke-width="2" x1="64.99999" x2="-65.00001" y1="65" y2="64.99999"/>
+<line stroke="rgb(0,226,48)" stroke-linecap="round" stroke-width="2" x1="-65.00001" x2="-65.00003" y1="64.99999" y2="-65.00001"/>
+</svg>

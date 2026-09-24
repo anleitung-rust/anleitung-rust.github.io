@@ -1,0 +1,10 @@
+<svg viewBox="-62.426407 -20 184.85281 184.85281" xmlns="http://www.w3.org/2000/svg">
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="0" x2="60" y1="0" y2="0"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="60" x2="102.42641" y1="0" y2="42.426407"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="102.42641" x2="102.42641" y1="42.426407" y2="102.42641"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="102.42641" x2="60" y1="102.42641" y2="144.85281"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="60" x2="0" y1="144.85281" y2="144.85281"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="0" x2="-42.426407" y1="144.85281" y2="102.42641"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="-42.426407" x2="-42.426403" y1="102.42641" y2="42.426407"/>
+<line stroke="rgb(255,109,193)" stroke-linecap="round" stroke-width="2" x1="-42.426403" x2="0.0000076293945" y1="42.426407" y2="0.0000038146973"/>
+</svg>

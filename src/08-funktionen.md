@@ -31,7 +31,7 @@ fn zeichne_quadrat(turtle: &mut TurtlePlan, groesse: f32) {
 
 Was bedeutet das?
 - `fn` bedeutet "function" (Funktion)
-- `zeichne_quadrat` ist der Name der Funktion
+- `zeichne_quadrat` ist der Name der Funktion. Diesen Namen kannst du frei wählen. Wähle ihn so, dass er die Funktion kurz und verständlich beschreibt.
 - `(turtle: &mut TurtlePlan, groesse: f32)` sind die **Parameter** (Werte, die die Funktion braucht)
 - Der Code zwischen `{ }` wird ausgeführt, wenn die Funktion aufgerufen wird
 
@@ -96,18 +96,17 @@ Funktionen haben viele Vorteile:
 
 ## Funktionen ohne Parameter
 
-Funktionen müssen nicht unbedingt Parameter haben:
+Funktionen müssen nicht unbedingt Parameter haben. Wenn eine Funktion keine Informationen von außen braucht, kann sie auch ohne Parameter definiert werden:
 
 ```rust
-fn zeichne_stern(turtle: &mut TurtlePlan) {
-    for _ in 0..5 {
-        turtle.forward(100.0);
-        turtle.right(144.0);
-    }
+fn sag_hallo() {
+    println!("Hallo, Welt!");
 }
 ```
 
-Diese Funktion zeichnet immer einen Stern mit der gleichen Größe.
+Diese Funktion macht immer dasselbe, ohne irgendeinen Wert zu benötigen.
+
+In einem Turtle-Programm ist `turtle` oft ein Parameter, weil die Funktion die Schildkröte zum Zeichnen braucht. Wenn du also eine Funktion schreibst, die die Schildkröte zeichnet, brauchst du sie meistens als Parameter.
 
 ## Das DRY-Prinzip
 
@@ -157,19 +156,17 @@ Erstelle eine Funktion `zeichne_fuenfstern()`, die einen fünfzackigen Stern zei
 
 ### Aufgabe 4: Herz-Funktion
 
-Schreibe eine Funktion `zeichne_herz()`, die ein Herz zeichnet. Das ist anspruchsvoll – überlege, wie du Kurven mit geraden Linien und Drehungen näherungsweise zeichnen kannst!
+Schreibe eine Funktion `zeichne_herz()`, die ein Herz zeichnet. Überlege, wie du Kurven mit geraden Linien und Drehungen näherungsweise zeichnen kannst!
 
 ### Aufgabe 5: Blume-Funktion
 
 Erstelle eine Funktion `zeichne_blume(turtle: &mut TurtlePlan, blaetter: i32)`, die eine Blume mit mehreren Blütenblättern zeichnet. Die Funktion soll bestimmen können, wie viele Blütenblätter die Blume hat.
 
-**Tipp:** Zeichne ein Blütenblatt (Kreis), drehe die Schildkröte dann um einen Winkel und wiederhole das. Bei `blaetter` Blättern drehst du jeweils um `360 / blaetter` Grad.
-
 ### Aufgabe 6: Haus mit Funktionen
 
 Schreibe eine Funktion `zeichne_haus(turtle: &mut TurtlePlan, breite: f32)`, die ein komplettes Haus zeichnet (ein Quadrat mit einem dreieckigen Dach). Die Größe soll über den Parameter `breite` bestimmt werden.
 
-Rufe die Funktion mehrmals auf, um ein ganzes Dorf mit unterschiedlich großen Häusern zu zeichnen! Bewege die Schildkröte zwischen den Häusern mit `forward()` und `backward()`, damit die Häuser nebeneinander stehen.
+Rufe die Funktion mehrmals auf, um ein ganzes Dorf mit unterschiedlich großen Häusern zu zeichnen! Bewege die Schildkröte zwischen den Häusern, damit die Häuser nebeneinander stehen.
 
 ## Zusammenfassung
 
