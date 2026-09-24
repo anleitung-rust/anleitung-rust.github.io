@@ -39,9 +39,9 @@ Die Anleitung umfasst folgende Themen:
 ```
 rustanleitung.github.io/
 ├── src/                    # Markdown-Dateien für die Kapitel
-│   ├── einleitung.md
-│   ├── 01-was-ist-programmieren.md
-│   ├── 02-erstes-programm.md
+│   ├── 000-einleitung.md
+│   ├── 020-was-ist-programmieren.md
+│   ├── 030-dein-erstes-programm.md
 │   └── ...
 ├── codesamples/           # Rust-Projekt mit allen Beispielen
 │   ├── examples/          # Ausführbare Beispielprogramme

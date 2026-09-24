@@ -1,43 +1,43 @@
 # Zusammenfassung
 
-[Einleitung](./einleitung.md)
+[Einleitung](./000-einleitung.md)
 
 # Vorbereitung
 
-- [Einrichtung der Programmierumgebung](./00-einrichtung.md)
+- [Einrichtung der Programmierumgebung](./010-einrichtung.md)
 
 # Erste Schritte
 
-- [Was ist Programmieren?](./01-was-ist-programmieren.md)
-- [Dein erstes Programm](./02-erstes-programm.md)
+- [Was ist Programmieren?](./020-was-ist-programmieren.md)
+- [Dein erstes Programm](./030-dein-erstes-programm.md)
 
 # Grundlagen
 
-- [Bewegung und Drehung](./03-bewegung-drehung.md)
-- [Kreise und gekrümmte Linien](./04-kreise.md)
-- [Farben und Stift](./05-farben-stift.md)
-- [Wiederholungen (Schleifen)](./06-wiederholungen.md)
+- [Bewegung und Drehung](./040-bewegung-drehung.md)
+- [Kreise und gekrümmte Linien](./050-kreise.md)
+- [Farben und Stift](./060-farben-stift.md)
+- [Wiederholungen (Schleifen)](./070-wiederholungen.md)
 
 # Fortgeschritten
 
-- [Variablen](./07-variablen.md)
-- [Funktionen](./08-funktionen.md)
-- [Weitere Beispiele](./09-weitere-beispiele.md)
+- [Variablen](./080-variablen.md)
+- [Funktionen](./090-funktionen.md)
+- [Weitere Beispiele](./100-weitere-beispiele.md)
 
 # Benutzereingabe
 
-- [Eingabe vom Benutzer](./14-eingabe.md)
+- [Eingabe vom Benutzer](./110-eingabe.md)
 
 # Der Spielablauf
 
-- [Spielschleifen und Zustandsmaschinen](./15-spielschleife.md)
+- [Spielschleifen und Zustandsmaschinen](./120-spielschleife.md)
 
 # Anhang
 
-- [Mehr über Daten](./11-datentypen.md)
+- [Mehr über Daten](./A010-datentypen.md)
 
-  - [Strings und Text](./10-strings.md)
-  - [Sammlungen: Listen von Dingen](./11-sammlungen.md)
-  - [Strukturen (Structs)](./12-structs.md)
-  - [Enums und Zustände](./13-enums.md)
-- [VS Code installieren (optional)](./99-vscode-appendix.md)
+  - [Strings und Text](./A020-strings.md)
+  - [Sammlungen: Listen von Dingen](./A030-sammlungen.md)
+  - [Strukturen (Structs)](./A040-structs.md)
+  - [Enums und Zustände](./A050-enums.md)
+- [VS Code installieren (optional)](./A060-vscode-appendix.md)
