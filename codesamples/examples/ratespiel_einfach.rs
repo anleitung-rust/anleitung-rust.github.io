@@ -61,6 +61,7 @@ fn main() {
             }
         };
 
+        // ANCHOR: richtig_nachricht
         if tipp == geheime_zahl {
             let message = format!(
                 "🎉 Richtig!\n\nDie Zahl war {}!\nDu hast {} Versuche gebraucht.",
@@ -76,6 +77,7 @@ fn main() {
             .show();
             break;
         } else if tipp < geheime_zahl {
+            // ANCHOR_END: richtig_nachricht
             let _ = MessageBox {
                 title: "Hinweis",
                 message: "Zu klein! Versuche eine größere Zahl.",

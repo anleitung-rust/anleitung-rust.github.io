@@ -168,6 +168,14 @@ loop {
 
 Damit hast du das Muster der Spielschleife mit echten Dialogen verstanden. Jetzt kannst du daraus das komplette Zahlenratespiel bauen.
 
+### Dialog für richtig geraten
+
+Jetzt kannst du natürlich das Spiel weiter ausbauen. Zum Beispiel kannst du einen Dialog anzeigen, wenn der Spieler richtig geraten hat.
+
+```rust
+{{#include ../codesamples/examples/ratespiel_einfach.rs:richtig_nachricht}}
+```
+
 ## Übung: Eigene Verbesserungen
 
 Verändere das Spiel:
