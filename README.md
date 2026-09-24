@@ -4,6 +4,8 @@ Eine deutschsprachige Einführung in das Programmieren für Schülerinnen und Sc
 
 Die Anleitung ist veröffentlicht unter: https://anleitung-rust.github.io/
 
+[![Deploy mdBook to GitHub Pages](https://github.com/anleitung-rust/anleitung-rust.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/anleitung-rust/anleitung-rust.github.io/actions/workflows/deploy.yml)
+
 ## Überblick
 
 Diese Anleitung wurde entwickelt, um Programmier-Anfängern einen einfachen und motivierenden Einstieg in die Welt des Programmierens zu bieten. Durch die Verwendung von Turtle-Grafik können Lernende sofort visuelle Ergebnisse ihrer Programme sehen, was das Verständnis erleichtert und Spaß macht.
