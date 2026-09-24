@@ -4,7 +4,7 @@ Eine deutschsprachige Einführung in das Programmieren für Schülerinnen und Sc
 
 Die Anleitung ist veröffentlicht unter: https://anleitung-rust.github.io/
 
-[![Deploy mdBook to GitHub Pages](https://github.com/anleitung-rust/anleitung-rust.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/anleitung-rust/anleitung-rust.github.io/actions/workflows/deploy.yml)
+[![Deploy mdBook to GitHub Pages](https://github.com/anleitung-rust/anleitung-rust.github.io/actions/workflows/deploy.yml/badge.svg)](https://anleitung-rust.github.io/)
 
 ## Überblick
 
