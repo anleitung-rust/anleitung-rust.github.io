@@ -49,9 +49,9 @@ let name = "Anna";
 Diese Werte sind alle unterschiedlich:
 
 - `alter` ist eine ganze Zahl
-- `preis` ist eine Zahl mit Nachkommastellen
-- `ist_aktiv` ist ein Wahrheitswert
-- `name` ist Text
+- `preis` ist eine Komman-Zahl mit Nachkommastellen
+- `ist_aktiv` ist ein Wahrheitswert (`true` oder `false`)
+- `name` ist Text, also mehrere Buchstaben hintereinander.
 
 ## Rust erkennt Typen oft automatisch
 
