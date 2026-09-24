@@ -8,6 +8,13 @@ Eine **Dialogbox** ist ein kleines Fenster, das eine Frage stellt. Du kennst das
 - "Wie heißt du?"
 - "Gib eine Zahl ein:"
 
+Bevor du sie benutzen kannst, musst du die Bibliothek in deiner `Cargo.toml` ergänzen:
+
+```toml
+[dependencies]
+rustydialogs = "0.4"
+```
+
 ## Eine einfache Eingabe
 
 So fragst du nach einem Namen:
@@ -17,8 +24,9 @@ So fragst du nach einem Namen:
 ```
 
 **Was passiert?**
-- `dialog::Input::new("...")` erstellt die Frage
+- `TextInput { ... }` erstellt die Frage
 - `.show()` zeigt die Box an
+- `Some(text)` enthält die Eingabe, `None` bedeutet Abbruch
 - Der Benutzer tippt etwas ein
 - Wir bekommen den Text zurück
 
@@ -31,7 +39,8 @@ Oft möchtest du eine Zahl haben:
 ```
 
 Mit `.parse()` wird der Text in eine Zahl umgewandelt.  
-Mit `.unwrap()` sagen wir "Das muss klappen!" - wenn der Text keine Zahl ist, stoppt das Programm.
+Wenn die Eingabe keine Zahl ist, zeigt das Beispiel eine Fehlermeldung an.  
+`TextInput::show()` liefert `Option<String>` zurück: `Some(...)` bei gültiger Eingabe oder Abbruch, sonst `None`.
 
 ## Übung: Dein Alter
 
@@ -45,32 +54,60 @@ Schreibe ein Programm, das:
 
 ```rust
 use turtle_lib::turtle_main;
-use dialog::DialogBox;
+use rustydialogs::{MessageBox, MessageButtons, MessageIcon, MessageResult, TextInput, TextInputMode};
 
 #[turtle_main]
 fn main() {
-    // Frage nach Name
-    let name = match dialog::Input::new("Wie heißt du?")
-        .title("Name")
-        .show()
+    let name = match TextInput {
+        title: "Name",
+        message: "Wie heißt du?",
+        value: "",
+        mode: TextInputMode::SingleLine,
+        owner: None,
+    }
+    .show()
     {
-        Ok(Some(n)) => n,
-        _ => return,
+        Some(n) => n,
+        None => return,
     };
-    
-    // Frage nach Alter
-    let alter_text = match dialog::Input::new("Wie alt bist du?")
-        .title("Alter")
-        .show()
+
+    let alter_text = match TextInput {
+        title: "Alter",
+        message: "Wie alt bist du?",
+        value: "",
+        mode: TextInputMode::SingleLine,
+        owner: None,
+    }
+    .show()
     {
-        Ok(Some(a)) => a,
-        _ => return,
+        Some(a) => a,
+        None => return,
     };
-    
-    let alter: u32 = alter_text.parse().unwrap();
-    
-    // Zeige Ergebnis
-    turtle.write_text(&format!("Hallo {}, du bist {} Jahre alt!", name, alter), 50.0);
+
+    let alter: u32 = match alter_text.parse() {
+        Ok(value) => value,
+        Err(_) => {
+            let _ = MessageBox {
+                title: "Fehler",
+                message: "Bitte gib eine gültige Zahl ein!",
+                icon: MessageIcon::Warning,
+                buttons: MessageButtons::Ok,
+                owner: None,
+            }
+            .show();
+            return;
+        }
+    };
+
+    let text = format!("Hallo {}, du bist {} Jahre alt!", name, alter);
+    let _ = MessageBox {
+        title: "Ergebnis",
+        message: &text,
+        icon: MessageIcon::Info,
+        buttons: MessageButtons::Ok,
+        owner: None,
+    }
+    .show();
 }
 ```
 </details>
@@ -80,12 +117,17 @@ fn main() {
 Manchmal willst du nur etwas mitteilen:
 
 ```rust
-use dialog::DialogBox;
+use rustydialogs::{MessageBox, MessageButtons, MessageIcon};
 
 fn main() {
-    let _ = dialog::Message::new("Willkommen zu meinem Programm!")
-        .title("Hallo")
-        .show();
+    let _ = MessageBox {
+        title: "Hallo",
+        message: "Willkommen zu meinem Programm!",
+        icon: MessageIcon::Info,
+        buttons: MessageButtons::Ok,
+        owner: None,
+    }
+    .show();
 }
 ```
 
@@ -94,18 +136,23 @@ fn main() {
 Du kannst auch Ja/Nein fragen:
 
 ```rust
-use dialog::DialogBox;
+use rustydialogs::{MessageBox, MessageButtons, MessageIcon, MessageResult};
 
 fn main() {
-    match dialog::Question::new("Möchtest du fortfahren?")
-        .title("Frage")
-        .show()
+    match MessageBox {
+        title: "Frage",
+        message: "Möchtest du fortfahren?",
+        icon: MessageIcon::Question,
+        buttons: MessageButtons::YesNo,
+        owner: None,
+    }
+    .show()
     {
-        Ok(dialog::Choice::Yes) => {
-            turtle.write_text("Los geht's!", 50.0);
+        Some(MessageResult::Yes) => {
+            println!("Los geht's!");
         }
         _ => {
-            turtle.write_text("Okay, tschüss!", 50.0);
+            println!("Okay, tschüss!");
         }
     }
 }
@@ -120,10 +167,10 @@ Erstelle ein Programm, das:
 
 ## Zusammenfassung
 
-- `dialog::Input` fragt nach Text
-- `dialog::Message` zeigt eine Nachricht
-- `dialog::Question` fragt Ja/Nein
+- `TextInput { ... }` fragt nach Text
+- `MessageBox { ... }` zeigt eine Nachricht
+- `MessageButtons::YesNo` fragt Ja/Nein
 - `.parse()` wandelt Text in Zahl um
-- `.unwrap()` sagt "Muss klappen!"
+- `Option::Some(...)` bedeutet eine gültige Eingabe, `None` bedeutet Abbruch
 
 Im nächsten Kapitel baust du dein erstes richtiges Spiel mit Schleifen und Eingaben!

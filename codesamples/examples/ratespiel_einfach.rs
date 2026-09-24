@@ -2,53 +2,99 @@
 //!
 //! Ein einfaches Ratespiel für Zahlen von 0 bis 100
 
-use dialog::DialogBox;
+use std::time::{SystemTime, UNIX_EPOCH};
+
 use macroquad::rand::gen_range;
+use rustydialogs::{MessageBox, MessageButtons, MessageIcon, TextInput, TextInputMode};
 
 fn main() {
+    macroquad::rand::srand(
+        SystemTime::now()
+            .duration_since(UNIX_EPOCH)
+            .unwrap()
+            .as_millis() as u64,
+    );
+
     let geheime_zahl = gen_range(0, 101);
     let mut versuche = 0;
-    
-    let _ = dialog::Message::new("Willkommen!\n\nIch habe mir eine Zahl zwischen 0 und 100 ausgedacht.\nKannst du sie erraten?")
-        .title("Zahlenratespiel")
-        .show();
-    
+
+    let welcome = "Willkommen!\n\nIch habe mir eine Zahl zwischen 0 und 100 ausgedacht.\nKannst du sie erraten?";
+    let _ = MessageBox {
+        title: "Zahlenratespiel",
+        message: welcome,
+        icon: MessageIcon::Info,
+        buttons: MessageButtons::Ok,
+        owner: None,
+    }
+    .show();
+
     loop {
         versuche += 1;
-        
-        let eingabe = match dialog::Input::new(&format!("Rate die Zahl (0-100):\nVersuch {}", versuche))
-            .title("Dein Tipp")
-            .show()
+
+        let prompt = format!("Rate die Zahl (0-100):\nVersuch {}", versuche);
+        let eingabe = match (TextInput {
+            title: "Dein Tipp",
+            message: &prompt,
+            value: "",
+            mode: TextInputMode::SingleLine,
+            owner: None,
+        })
+        .show()
         {
-            Ok(Some(text)) => text,
-            _ => break,
+            Some(text) => text,
+            None => break,
         };
-        
+
         let tipp: i32 = match eingabe.parse() {
             Ok(zahl) => zahl,
             Err(_) => {
-                let _ = dialog::Message::new("Bitte gib eine gültige Zahl ein!")
-                    .title("Fehler")
-                    .show();
+                let message = "Bitte gib eine gültige Zahl ein!";
+                let _ = MessageBox {
+                    title: "Fehler",
+                    message,
+                    icon: MessageIcon::Warning,
+                    buttons: MessageButtons::Ok,
+                    owner: None,
+                }
+                .show();
                 continue;
             }
         };
-        
+
         if tipp == geheime_zahl {
-            let _ = dialog::Message::new(&format!("🎉 Richtig!\n\nDie Zahl war {}!\nDu hast {} Versuche gebraucht.", geheime_zahl, versuche))
-                .title("Gewonnen!")
-                .show();
+            let message = format!(
+                "🎉 Richtig!\n\nDie Zahl war {}!\nDu hast {} Versuche gebraucht.",
+                geheime_zahl, versuche
+            );
+            let _ = MessageBox {
+                title: "Gewonnen!",
+                message: &message,
+                icon: MessageIcon::Info,
+                buttons: MessageButtons::Ok,
+                owner: None,
+            }
+            .show();
             break;
         } else if tipp < geheime_zahl {
-            let _ = dialog::Message::new("Zu klein! Versuche eine größere Zahl.")
-                .title("Hinweis")
-                .show();
+            let _ = MessageBox {
+                title: "Hinweis",
+                message: "Zu klein! Versuche eine größere Zahl.",
+                icon: MessageIcon::Info,
+                buttons: MessageButtons::Ok,
+                owner: None,
+            }
+            .show();
         } else {
-            let _ = dialog::Message::new("Zu groß! Versuche eine kleinere Zahl.")
-                .title("Hinweis")
-                .show();
+            let _ = MessageBox {
+                title: "Hinweis",
+                message: "Zu groß! Versuche eine kleinere Zahl.",
+                icon: MessageIcon::Info,
+                buttons: MessageButtons::Ok,
+                owner: None,
+            }
+            .show();
         }
     }
-    
+
     println!("Spiel beendet!");
 }

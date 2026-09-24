@@ -2,20 +2,24 @@
 //!
 //! Fragt nach einem Namen.
 
-use dialog::DialogBox;
+use rustydialogs::{TextInput, TextInputMode};
 
 fn main() {
     // ANCHOR: main
-    match dialog::Input::new("Wie heißt du?")
-        .title("Name")
-        .show()
-    {
-        Ok(Some(name)) => {
+    let input = TextInput {
+        title: "Name",
+        message: "Wie heißt du?",
+        value: "",
+        mode: TextInputMode::SingleLine,
+        owner: None,
+    };
+    match input.show() {
+        Some(name) => {
             println!("Hallo, {}!", name);
         }
         _ => {
             println!("Keine Eingabe.");
         }
-    }
+    };
     // ANCHOR_END: main
 }
