@@ -24,13 +24,6 @@
 - [Funktionen](./08-funktionen.md)
 - [Weitere Beispiele](./09-weitere-beispiele.md)
 
-# Mehr über Daten
-
-- [Strings und Text](./10-strings.md)
-- [Sammlungen: Listen von Dingen](./11-sammlungen.md)
-- [Strukturen (Structs)](./12-structs.md)
-- [Enums und Zustände](./13-enums.md)
-
 # Benutzereingabe
 
 - [Eingabe vom Benutzer](./14-eingabe.md)
@@ -41,4 +34,10 @@
 
 # Anhang
 
+- [Mehr über Daten](./11-datentypen.md)
+
+  - [Strings und Text](./10-strings.md)
+  - [Sammlungen: Listen von Dingen](./11-sammlungen.md)
+  - [Strukturen (Structs)](./12-structs.md)
+  - [Enums und Zustände](./13-enums.md)
 - [VS Code installieren (optional)](./99-vscode-appendix.md)

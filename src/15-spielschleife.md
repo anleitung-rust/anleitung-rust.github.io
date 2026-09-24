@@ -56,7 +56,7 @@ Jetzt vergleichen wir:
 
 Eine Schleife wiederholt einen Block wieder und wieder. Genau das brauchen wir für ein Ratespiel: Solange der Spieler falsch liegt, soll das Programm erneut fragen.
 
-#### 4a. Erst eine einfache Schleife
+#### Erst eine einfache Schleife
 
 ```rust
 loop {
@@ -67,7 +67,7 @@ loop {
 
 `loop { ... }` startet eine Endlosschleife. `break;` beendet sie sofort wieder. Ohne `break` würde das Programm für immer weiterlaufen.
 
-#### 4b. Jetzt mit Zähler
+#### Jetzt mit Zähler
 
 ```rust
 let mut versuche = 0;
@@ -90,7 +90,7 @@ loop {
 
 Das ist die Grundidee der Spielschleife: Zähle mit, mache etwas, prüfe, ob das Spiel vorbei ist.
 
-#### 4c. Jetzt mit Tipp und Vergleich
+#### Jetzt mit Tipp und Vergleich
 
 Als Nächstes ersetzen wir nur den `println!` durch eine echte Prüfung:
 
@@ -123,7 +123,7 @@ Jetzt sieht die Schleife schon sehr nach einem Ratespiel aus:
 
 Du musst jetzt nur noch die feste Zahl `let tipp = 10;` durch die echte Benutzereingabe ersetzen. Genau das macht die nächste Übung!
 
-#### 4d. Dialoge in der Schleife
+#### Dialoge in der Schleife
 
 Jetzt kommt der letzte wichtige Schritt: In einer echten Spielschleife fragt das Programm nicht mit einer festen Zahl, sondern mit einem Dialogfenster nach der Eingabe des Spielers.
 
