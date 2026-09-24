@@ -114,6 +114,9 @@ In Rust gibt es verschiedene Arten von Zahlen:
 
 Für die Turtle-Befehle brauchst du meist Kommazahlen (mit `.0` am Ende).
 
+
+Mehr dazu findest du in Kapitel [Mehr über Daten](11-datentypen.md).
+
 ## Gute Namen für Variablen
 
 Wähle Namen, die beschreiben, was in der Variable gespeichert ist:
