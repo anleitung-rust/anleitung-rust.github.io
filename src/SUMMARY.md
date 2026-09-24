@@ -5,24 +5,19 @@
 # Vorbereitung
 
 - [Einrichtung der Programmierumgebung](./010-einrichtung.md)
-
-# Erste Schritte
-
 - [Was ist Programmieren?](./020-was-ist-programmieren.md)
+
+# Turtlegrafiken
 - [Dein erstes Programm](./030-dein-erstes-programm.md)
 
-# Grundlagen
-
-- [Bewegung und Drehung](./040-bewegung-drehung.md)
-- [Kreise und gekrümmte Linien](./050-kreise.md)
-- [Farben und Stift](./060-farben-stift.md)
-- [Wiederholungen (Schleifen)](./070-wiederholungen.md)
-
-# Fortgeschritten
-
-- [Variablen](./080-variablen.md)
-- [Funktionen](./090-funktionen.md)
-- [Weitere Beispiele](./100-weitere-beispiele.md)
+  - [Bewegung und Drehung](./040-bewegung-drehung.md)
+  - [Kreise und gekrümmte Linien](./050-kreise.md)
+  - [Farben und Stift](./060-farben-stift.md)
+- [Programmiersprachenfunktionen](./065-programmiersparche.md)
+  - [Wiederholungen (Schleifen)](./070-wiederholungen.md)
+  - [Variablen](./080-variablen.md)
+  - [Funktionen](./090-funktionen.md)
+  - [Weitere Beispiele](./100-weitere-beispiele.md)
 
 # Benutzereingabe
 

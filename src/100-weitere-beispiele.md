@@ -104,12 +104,6 @@ Diese Konzepte sind wichtig, um richtige Programme zu schreiben – zum Beispiel
 3. **Kleine Schritte**: Ändere immer nur eine Sache und teste dann
 4. **Fragen stellen**: Wenn du nicht weiterkommst, frage jemanden oder suche online
 
-## Abschluss
+## Zusammenfassung
 
-Programmieren ist wie eine neue Sprache lernen – am Anfang ist es ungewohnt, aber mit der Zeit wird es immer leichter. Die Schildkröten-Grafik ist ein großartiger Einstieg, weil du sofort siehst, was dein Code bewirkt.
-
-Viel Erfolg und viel Spaß beim Programmieren! 🎉🐢
-
----
-
-*Hinweis: Diese Anleitung basiert auf der Turtle-Bibliothek von [turtlers](https://github.com/enaut/turtlers). Weitere Informationen findest du in der offiziellen Dokumentation.*
+Programmieren ist wie eine neue Sprache lernen – am Anfang ist es ungewohnt, aber mit der Zeit wird es immer leichter. Die Schildkröten-Grafik ist ein großartiger Einstieg, weil du sofort siehst, was dein Code bewirkt.🐢

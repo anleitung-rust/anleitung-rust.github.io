@@ -144,4 +144,4 @@ Du hast gelernt:
 - `end_fill()` - Beendet das Füllen und füllt die Form aus
 - `set_pen_width(dicke)` - Ändert die Stiftdicke
 
-Im nächsten Kapitel lernst du, wie du **Schleifen** verwendest, um deine Zeichnungen noch effizienter zu machen!
+Im nächsten Kapitel lernst du, wie du deine Zeichnungen noch effizienter machen kannst!
